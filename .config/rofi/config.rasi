@@ -138,6 +138,10 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 @theme "lb"
+window {
+    width: 100%;
+    height: 15%;
+}
 timeout {
     action: "kb-cancel";
     delay:  0;
