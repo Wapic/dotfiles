@@ -182,26 +182,28 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Custom binds
+# Screenshot binds
 bindsym $mod+Shift+s --release exec "import region.png;xclip -selection clipboard -t image/png -i region.png"
 bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) window.png;xclip -selection clipboard -t image/png -i window.png"
 bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
+
+# Workspace workflow
 bindsym Mod1+Tab workspace next
 bindsym Mod1+a move workspace to output next
 
 # Set the desktop background
 exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper.jpg
 
-# Set 1st monitor as primary
+# Set main monitor as primary
 exec --no-startup-id xrandr --output DP-4 --primary
 
-# Set 2nd monitor to 144hz
+# Set secondary monitor to 144hz
 exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --rate 144.0
 
 # Start the compositor daemonizing it (-b) and enabling shadows (-c)
-# exec --no-startup-id picom -cb
+exec --no-startup-id picom -cb
 
-#Put Workspaces on specific screens
+# assign workspaces to preferred monitors
 workspace "1: Socials" output DVI-D-0
 workspace "2: General" output DP-4
 workspace "3: Game Launchers" output DP-4
