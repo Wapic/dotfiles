@@ -192,7 +192,7 @@ bindsym Mod1+Tab workspace next
 bindsym Mod1+a move workspace to output next
 
 # Set the desktop background
-exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper2.jpg
 
 # Set main monitor as primary
 exec --no-startup-id xrandr --output DP-4 --primary
