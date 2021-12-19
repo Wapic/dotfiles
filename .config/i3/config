@@ -209,9 +209,9 @@ workspace "2: General" output DP-4
 workspace "3: Game Launchers" output DP-4
 
 # Auto start Workspace 1 programs
-exec --no-startup-id discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy
-exec --no-startup-id element-desktop --disable-gpu
-exec --no-startup-id firefox listen.tidal.com
+exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
+exec --no-startup-id "element-desktop --disable-gpu"
+exec --no-startup-id "firefox listen.tidal.com"
 for_window [class="(?i)Discord"] move container to workspace "1: Socials"
 for_window [class="(?i)Element"] move container to workspace "1: Socials"
 for_window [title="TIDAL"] move container to workspace "1: Socials"
