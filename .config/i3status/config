@@ -8,7 +8,7 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 1
 }
 
 order += "ipv6"
@@ -18,14 +18,16 @@ order += "battery all"
 order += "disk /"
 order += "load"
 order += "memory"
+order += "cpu_temperature 0"
 order += "tztime local"
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
+        format_up = "E: %ip"
         format_down = "E: down"
 }
 
 disk "/" {
+        prefix_type = "decimal"
         format = "%avail"
 }
 
@@ -34,7 +36,7 @@ load {
 }
 
 memory {
-        format = "%used | %available"
+        format = "%used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
