@@ -21,27 +21,31 @@
 background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+[values]
+line-size = 0
+
 [bar/main]
 monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 18
+bottom = true
 
 radius = 6.0
 fixed-center = false
 
-background = #000000
+background = #000000ff
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+line-size = ${values.line-size}
+line-color = #000
 
-border-size = 4
+border-size = 2
 border-color = #000000
 
 padding-left = 0
@@ -50,11 +54,11 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=11;2
+font-0 = Hack:pixelsize=10;2
 
 modules-left = i3
 modules-center =
-modules-right = date
+modules-right = filesystem fs-hdd fs-ssd date
 
 tray-position = right
 tray-padding = 2
@@ -63,17 +67,18 @@ tray-padding = 2
 monitor = ${env:MONITOR:DVI-D-0}
 width = 100%
 height = 18
+bottom = true
 
 radius = 6.0
 fixed-center = false
 
-background = #000000
+background = #000000ff
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+line-size = ${values.line-size}
+line-color = #000
 
-border-size = 4
+border-size = 2
 border-color = #000000
 
 padding-left = 0
@@ -82,7 +87,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=10;1
+font-0 = Hack:pixelsize=10;2
 
 modules-left = i3
 modules-center =
@@ -161,13 +166,33 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+[module/fs-ssd]
+type = internal/fs
+interval = 25
+
+mount-0 = /home/wapic/ssd
+
+label-mounted = %{F#0a81f5}%/ssd{F-}: %used% / %total%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/fs-hdd]
+type = internal/fs
+interval = 25
+
+mount-0 = /home/wapic/2tbhdd
+
+label-mounted = %{F#0a81f5}/2tbhdd%{F-}: %used% / %total%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
 [module/filesystem]
 type = internal/fs
 interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used% / %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
