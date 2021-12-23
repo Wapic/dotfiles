@@ -18,14 +18,17 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #e000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
-alert = #bd2c40
+alert = #ff0000
+red = #ff0000
+blue = #0000ff
+green= #00ff00
 
 [values]
 line-size = 0
@@ -33,13 +36,13 @@ line-size = 0
 [bar/main]
 monitor = ${env:MONITOR:DP-4}
 width = 100%
-height = 22
+height = 20
 bottom = true
 
 radius = 0.0
 fixed-center = false
 
-background = #aa000000
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = ${values.line-size}
@@ -51,44 +54,27 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=10;2
+;font-0 = Hack:pixelsize=10;3
+font-0 = DejaVu Sans:pixelsize=10;3
+font-1 = Font Awesome 5 Free:pixelsize=10;3
 
 modules-left = i3
 modules-center =
-modules-right = filesystem fs-hdd fs-ssd date
+modules-right = xkeyboard memory filesystem fs-hdd fs-ssd date
 
 tray-position = right
 tray-padding = 2
 
 [bar/secondary]
+inherit = bar/main
+
 monitor = ${env:MONITOR:DVI-D-0}
-width = 100%
-height = 22
-bottom = true
 
-radius = 0.0
-fixed-center = false
-
-background = #aa000000
-foreground = ${colors.foreground}
-
-line-size = ${values.line-size}
-line-color = #000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = Hack:pixelsize=10;2
+background = #c000
 
 modules-left = i3
 modules-center =
 modules-right = date
-
-tray-position = right
-tray-padding = 2
 
 ;[bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -148,47 +134,41 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+;format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
-label-layout = %layout%
+label-layout = %name%
+label-layout-padding = 0
 label-layout-underline = ${colors.secondary}
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding = 1
+label-indicator-margin = 0
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
 [module/fs-ssd]
-type = internal/fs
-interval = 25
+inherit = module/filesystem
 
 mount-0 = /home/wapic/ssd
 
-label-mounted = %{F#0a81f5}%/ssd{F-}: %used% / %total%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
+label-mounted = %{F#00ff00}%/ssd{F-}: %used% / %total%
 [module/fs-hdd]
-type = internal/fs
-interval = 25
+inherit = module/filesystem
 
 mount-0 = /home/wapic/2tbhdd
 
-label-mounted = %{F#0a81f5}/2tbhdd%{F-}: %used% / %total%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted = %{F#00ff00}/2tbhdd%{F-}: %used% / %total%
 
-[module/filesystem]
+[module/filesystem] 
 type = internal/fs
 interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used% / %total%
+label-mounted = %{F#00ff00}%mountpoint%%{F-}: %used% / %total%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.alert}
 
 [module/bspwm]
 type = internal/bspwm
@@ -299,7 +279,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = %gb_used% / %gb_total%
 
 [module/wlan]
 type = internal/network
@@ -500,7 +480,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
