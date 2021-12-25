@@ -152,7 +152,7 @@ inherit = module/filesystem
 
 mount-0 = /home/wapic/ssd
 
-label-mounted = %{F#00ff00}%/ssd{F-}: %used% / %total%
+label-mounted = %{F#00ff00}/ssd%{F-}: %used% / %total%
 [module/fs-hdd]
 inherit = module/filesystem
 
