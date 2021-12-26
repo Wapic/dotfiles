@@ -188,7 +188,7 @@ bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) w
 bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
 # Workspace workflow
-bindsym Mod1+Tab workspace next
+bindsym Mod1+Tab exec --no-startup-id rofi -modi "window" -show window
 bindsym Mod1+a move workspace to output next
 
 # Bind to restart polybar
