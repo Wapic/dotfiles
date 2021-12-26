@@ -16,6 +16,7 @@ Plug 'navarasu/onedark.nvim'
 call plug#end()
 
 colorscheme onedark
+let g:coq_settings = {'auto_start': v:true}
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
