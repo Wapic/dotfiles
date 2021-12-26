@@ -7,7 +7,7 @@ set tabstop=4
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
