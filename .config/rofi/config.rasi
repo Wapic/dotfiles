@@ -1,7 +1,7 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+	modi: "window,run,ssh,filebrowser,drun";
     font: "Hack 10";
-	location: 2;
+    location: 7;
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
@@ -22,11 +22,11 @@ configuration {
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: "normal";*/
-/*	case-sensitive: false;*/
+	sort: false;
+	sorting-method: "normal";
+	case-sensitive: false;
 /*	cycle: true;*/
-/*	sidebar-mode: false;*/
+	sidebar-mode: true;
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
@@ -139,8 +139,8 @@ configuration {
 }
 @theme "lb"
 window {
-    width: 100%;
-    height: 15%;
+    width: 15%;
+    height: 50%;
 }
 timeout {
     action: "kb-cancel";
