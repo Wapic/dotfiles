@@ -192,7 +192,7 @@ bindsym Mod1+Tab exec --no-startup-id rofi -modi "window" -show window
 bindsym Mod1+a move workspace to output next
 
 # Bind to restart polybar
-bindsym $mod+Shift+T exec ~/polybar.sh
+bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
 # Set the desktop background
 exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper2.jpg
