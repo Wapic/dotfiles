@@ -99,6 +99,7 @@ alias clr="clear;neofetch"
 alias wpc="cd ~/.local/share/multimc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
 alias vim="nvim"
 alias ll="ls -X"
+alias aur="./scripts/aurbuild.py"
 
 xhost +local:root > /dev/null 2>&1
 
