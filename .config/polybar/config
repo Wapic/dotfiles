@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #e000
+background = #b000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -37,7 +37,7 @@ line-size = 0
 monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 20
-bottom = true
+bottom = false
 
 radius = 0.0
 fixed-center = false
@@ -51,7 +51,7 @@ line-color = #000
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 2
 
 ;font-0 = Hack:pixelsize=10;3
@@ -69,8 +69,7 @@ tray-padding = 2
 inherit = bar/main
 
 monitor = ${env:MONITOR:DVI-D-0}
-
-background = #c000
+background = #6000
 
 modules-left = i3
 modules-center =

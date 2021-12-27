@@ -234,6 +234,7 @@ for_window [class="Lutris"] move container to workspace "3: Game"
 # i3-gaps
 gaps inner 6
 smart_gaps on
+for_window [class=".*"] border pixel 0
 
 # Custom Colors
 # class                 border  backgr. text    indicator child_border
