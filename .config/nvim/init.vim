@@ -13,10 +13,13 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'navarasu/onedark.nvim'
 
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
 call plug#end()
 
 colorscheme onedark
-let g:coq_settings = {'auto_start': v:true}
+
+let g:coq_settings = { 'auto_start': v:true }
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
