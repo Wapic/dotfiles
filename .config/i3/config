@@ -206,6 +206,9 @@ exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --rate 144.0
 # Start the compositor daemonizing it (-b) and enabling shadows (-c)
 exec --no-startup-id picom -cb
 
+# Start PulseAudio server
+exec --no-startup-id pulseaudio
+
 # Start polybar for both monitors
 exec --no-startup-id polybar main
 exec --no-startup-id polybar secondary

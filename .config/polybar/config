@@ -155,9 +155,9 @@ label-mounted = %{F#00ff00}/ssd%{F-}: %used% / %total%
 [module/fs-hdd]
 inherit = module/filesystem
 
-mount-0 = /home/wapic/2tbhdd
+mount-0 = /home/wapic/hdd
 
-label-mounted = %{F#00ff00}/2tbhdd%{F-}: %used% / %total%
+label-mounted = %{F#00ff00}/hdd%{F-}: %used% / %total%
 
 [module/filesystem] 
 type = internal/fs
