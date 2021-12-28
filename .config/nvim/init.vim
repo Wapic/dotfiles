@@ -9,20 +9,26 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'navarasu/onedark.nvim'
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'bignimbus/pop-punk.vim'
+
 call plug#end()
 
-colorscheme onedark
+colorscheme pop-punk
 
-let g:coq_settings = { 'auto_start': v:true }
+let g:coq_settings = { 'auto_start': 'shut-up' }
 
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
+let g:terminal_ansi_colors = pop_punk#AnsiColors()
+
+lua << EOF
+require'nvim-treesitter.configs'.setup ({
   highlight = {
     enable = true,
     custom_captures = {
@@ -35,5 +41,5 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-}
+})
 EOF
