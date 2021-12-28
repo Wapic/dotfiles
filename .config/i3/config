@@ -210,6 +210,9 @@ exec --no-startup-id picom -cb
 exec --no-startup-id polybar main
 exec --no-startup-id polybar secondary
 
+#Disable mouse acceleration
+exec xinput set-prop 21 'libinput Accel Profile Enabled' 0 1
+
 # assign workspaces to preferred monitors
 workspace "1: Socials" output DVI-D-0
 workspace "2: General" output DP-4
