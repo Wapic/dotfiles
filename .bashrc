@@ -96,10 +96,10 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias clr="clear;neofetch"
-alias wpc="cd ~/.local/share/multimc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
+alias wpc="cd ~/.local/share/polymc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
 alias vim="nvim"
 alias ll="ls -X"
-alias aur="./scripts/aurbuild.py"
+alias aur="/home/wapic/scripts/aurbuild.py"
 
 xhost +local:root > /dev/null 2>&1
 

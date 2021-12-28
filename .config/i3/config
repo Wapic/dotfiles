@@ -115,7 +115,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Socials"
 set $ws2 "2: General"
-set $ws3 "3: Game Launchers"
+set $ws3 "3: Game"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -217,18 +217,16 @@ workspace "3: Game" output DP-4
 
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
-exec --no-startup-id "element-desktop --disable-gpu"
+#exec --no-startup-id "element-desktop --disable-gpu"
 exec --no-startup-id "firefox listen.tidal.com"
 for_window [class="(?i)Discord"] move container to workspace "1: Socials"
-for_window [class="(?i)Element"] move container to workspace "1: Socials"
+#for_window [class="(?i)Element"] move container to workspace "1: Socials"
 for_window [title="TIDAL"] move container to workspace "1: Socials"
 
 # Auto start Workspace 3 programs
 exec --no-startup-id steam
-exec --no-startup-id lutris
-exec --no-startup-id multimc
+exec --no-startup-id lutris 
 for_window [class="Steam"] move container to workspace "3: Game"
-for_window [class="(?i)MultiMC"] move container to workspace "3: Game"
 for_window [class="Lutris"] move container to workspace "3: Game"
 
 # i3-gaps
