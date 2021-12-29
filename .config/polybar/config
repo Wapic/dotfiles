@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #b000
+background = #0000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -33,20 +33,36 @@ green= #00ff00
 [values]
 line-size = 0
 
+[bar/main-left]
+inherit = bar/main
+width = 20%
+offset-x = 6px
+modules-left = i3
+
+[bar/main-right]
+inherit = bar/main
+width = 3%
+offset-x = 97%:-6px
+modules-right = date
+
+background = #a000
+
+tray-position = right
+tray-padding = 2
+
 [bar/main]
 monitor = ${env:MONITOR:DP-4}
-width = 100%
-height = 20
-bottom = false
-
+height = 24
+bottom = true
+offset-y = 5px
 radius = 0.0
 fixed-center = false
 
-background = ${colors.background}
+background = #0000
 foreground = ${colors.foreground}
 
 line-size = ${values.line-size}
-line-color = #000
+line-color = #f00
 
 padding-left = 0
 padding-right = 2
@@ -54,22 +70,17 @@ padding-right = 2
 module-margin-left = 0
 module-margin-right = 2
 
+override-redirect = true
+wm-restack = i3
 ;font-0 = Hack:pixelsize=10;3
-font-0 = DejaVu Sans:pixelsize=10;3
-font-1 = Font Awesome 5 Free:pixelsize=10;3
-
-modules-left = i3
-modules-center =
-modules-right = xkeyboard memory filesystem fs-hdd fs-ssd date
-
-tray-position = right
-tray-padding = 2
+font-0 = DejaVu Sans:pixelsize=12;2
+font-1 = Font Awesome 5 Free:pixelsize=12;2
 
 [bar/secondary]
 inherit = bar/main
-
+width = 100%:-12px
+offset-x = 6px
 monitor = ${env:MONITOR:DVI-D-0}
-background = #6000
 
 modules-left = i3
 modules-center =
@@ -89,7 +100,6 @@ modules-right = date
 
 ;line-size = 3
 ;line-color = #f00
-
 ;border-size = 4
 ;border-color = #00000000
 
@@ -206,24 +216,25 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #30ff
 label-focused-underline= #fff
-label-focused-padding = 1
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-label-unfocused-padding = 1
+label-unfocused-padding = 2
+label-unfocused-background = #4111
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
+label-visible-background = #30ff
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 1
+label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -315,29 +326,29 @@ label-connected = %local_ip%
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
+;label-disconnected = %ifnamehttps://youtu.be/3% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
 interval = 1
 
-date = %Y/%m/%d
+date = 
 date-alt = " %Y-%m-%d"
 
-time = %H:%M:%S
+time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = 
 
-label = [%date% - %time%]
+label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
