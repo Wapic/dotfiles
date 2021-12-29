@@ -5,36 +5,71 @@ import subprocess
 import os
 import pathlib
 
-if __name__ == "__main__":
-
-    if len(sys.argv) < 3:
-        print("Not enough arguments.\nusage: aur <install/search> <package-name>")
-        quit()
-
-    url = f"https://aur.archlinux.org/rpc/?v=5&type=search&arg={str(sys.argv[2])}"
-    x = requests.get(url)
-    result = x.json()["results"]
+def req(arg):
+    r = requests.get("https://aur.archlinux.org/rpc/?v=5", params={'type':'search', 'arg': arg})
     
-    if len(result) < 1 :
-        print("No matching results")
+    try:
+        result = r.json()
+    except:
+        print("Error converting result to json")
         quit()
-  
-    if str(sys.argv[1]).lower() == "install": 
-        name = result[0]["Name"]
-        cloneURL = f"https://aur.archlinux.org/{name}.git"
-        print(f"found: {cloneURL}")
-        
-        if input("continue? [y/n] ") == "y":
-            dir = f"{os.environ['HOME']}/builds/{name}/"
-            
-            try:
-                if pathlib.Path(dir).exists: raise Exception()
-                subprocess.run(["git", "clone", cloneURL, dir])
-            except:
-                print("Folder already exists, attempting to build")
-            finally:
-                subprocess.run(f"(cd {dir} && makepkg -si)", shell=True)
+    
+    if result["type"] == "error":
+        print(result["error"])
 
-    elif str(sys.argv[1]).lower() == "search":
-        for entries in result:
+    elif result["resultcount"] == 0:
+        print("No results found")
+    else:
+        return result["results"]
+
+def installFirst(package):
+    name = package[0]["Name"]
+        
+    if input(f"Install {name}? <y/n> ") == "y": 
+        build(name)
+            
+def installChoose(package):
+    for i in range(len(package)):
+        print(f"{i}) {package[i]['Name']}")
+        
+    userInput = input(f"Which package to install? <0-{len(package) - 1}>")
+    name = package[int(userInput)]["Name"]
+
+    build(name) 
+    
+def build(name):
+    url = f"https://aur.archlinux.org/{name}.git"
+    dir = f"{os.environ['HOME']}/build/{name}/"
+
+    try:
+        if pathlib.Path(dir).exists(): 
+            raise RuntimeError(f"Directory already exists: {dir}")
+        subprocess.run(["git", "clone", url, dir])
+        subprocess.run(f"(cd {dir} && makepkg -si)", shell=True)
+    except RuntimeError as err:
+        print(err)
+
+def printUsage():
+    print("Usage: aur <install/search> <package-name>")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Not enough arguments")
+        printUsage()
+        quit()  
+    
+    action, package = sys.argv[1], req(sys.argv[2])
+    
+
+    if action.lower() == "search":
+        for entries in package:
             print(entries["Name"])
+    
+    elif action.lower() == "install":
+        if len(package) == 1:
+            installFirst(package)
+        else:
+            installChoose(package)
+    else:
+        print(f"Unknown argument: {action}")
+        printUsage()
