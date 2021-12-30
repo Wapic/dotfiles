@@ -222,10 +222,10 @@ workspace "3: Game" output DP-4
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
 #exec --no-startup-id "element-desktop --disable-gpu"
-exec --no-startup-id "firefox listen.tidal.com"
+exec --no-startup-id spotify-qt
 for_window [class="(?i)Discord"] move container to workspace "1: Socials"
 #for_window [class="(?i)Element"] move container to workspace "1: Socials"
-for_window [title="TIDAL"] move container to workspace "1: Socials"
+for_window [class="spotify-qt"] move container to workspace "1: Socials"
 
 # Auto start Workspace 3 programs
 exec --no-startup-id steam
