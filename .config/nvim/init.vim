@@ -19,6 +19,8 @@ Plug 'neovim/nvim-lspconfig'
 
 Plug 'bignimbus/pop-punk.vim'
 
+Plug 'xiyaowong/nvim-transparent'
+
 call plug#end()
 
 colorscheme pop-punk
@@ -28,6 +30,8 @@ nnoremap <C-c> <cmd>CHADopen<cr>
 let g:coq_settings = { 'auto_start': 'shut-up' }
 
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
+
+let g:transparent_enabled = v:true
 
 lua << EOF
 require'nvim-treesitter.configs'.setup ({
