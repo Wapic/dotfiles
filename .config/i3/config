@@ -195,7 +195,7 @@ bindsym Mod1+a move workspace to output next
 bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
 # Set the desktop background
-exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper2.jpg
+exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper.jpg
 
 # Set main monitor as primary
 exec --no-startup-id xrandr --output DP-4 --primary
