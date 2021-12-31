@@ -113,9 +113,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Socials"
-set $ws2 "2: General"
-set $ws3 "3: Game"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -195,7 +195,7 @@ bindsym Mod1+a move workspace to output next
 bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
 # Set the desktop background
-exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/wapic/Downloads/wallpaper.jpeg
 
 # Set main monitor as primary
 exec --no-startup-id xrandr --output DP-4 --primary
@@ -206,32 +206,32 @@ exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --rate 144.0
 # Start the compositor daemonizing it (-b) and enabling shadows (-c)
 exec --no-startup-id picom -cb
 
-# Start polybar for both monitors
-exec --no-startup-id polybar main
-exec --no-startup-id polybar secondary
+# Start polybar
+exec ~/scripts/polybar.sh
 
 #Disable mouse acceleration
 exec xinput set-prop 21 'libinput Accel Profile Enabled' 0 1
 exec xinput set-prop 8 'libinput Accel Profile Enabled' 0 1
 
 # assign workspaces to preferred monitors
-workspace "1: Socials" output DVI-D-0
-workspace "2: General" output DP-4
-workspace "3: Game" output DP-4
+workspace "1" output DVI-D-0
+workspace "2" output DP-4
 
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
-#exec --no-startup-id "element-desktop --disable-gpu"
-exec --no-startup-id spotify-qt
-for_window [class="(?i)Discord"] move container to workspace "1: Socials"
-#for_window [class="(?i)Element"] move container to workspace "1: Socials"
-for_window [class="spotify-qt"] move container to workspace "1: Socials"
+exec --no-startup-id "element-desktop --disable-gpu"
 
-# Auto start Workspace 3 programs
-exec --no-startup-id steam
-exec --no-startup-id lutris 
-for_window [class="Steam"] move container to workspace "3: Game"
-for_window [class="Lutris"] move container to workspace "3: Game"
+# Move programs to workspace 1
+for_window [class="(?i)Discord"] move container to workspace "1"
+for_window [class="(?i)Element"] move container to workspace "1"
+
+# Auto start Workspace 2 programs
+exec --no-startup-id spotify-qt
+
+#Move programs to workspace 2
+for_window [class="spotify-qt"] move container to workspace "1"
+
+
 
 # i3-gaps
 gaps inner 6
