@@ -38,7 +38,7 @@ inherit = bar/main
 width = 100%:-12px
 offset-x = 6px
 modules-left = i3
-modules-right = date
+modules-right = pulseaudio date powermenu
 modules-center = xwindow
 
 tray-position = right
@@ -362,16 +362,16 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = 
 
-label = %time%
+label =  %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = ﱝ muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -478,7 +478,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
