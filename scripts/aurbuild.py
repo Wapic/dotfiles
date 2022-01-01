@@ -16,9 +16,11 @@ def req(arg):
     
     if result["type"] == "error":
         print(result["error"])
+        quit()
 
     elif result["resultcount"] == 0:
         print("No results found")
+        quit()
     else:
         return result["results"]
 
