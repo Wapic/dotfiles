@@ -228,10 +228,14 @@ for_window [class="(?i)Element"] move container to workspace "1"
 # Auto start Workspace 2 programs
 exec --no-startup-id spotify-qt
 
-#Move programs to workspace 2
+# Move programs to workspace 2
 for_window [class="spotify-qt"] move container to workspace "1"
 
+# Start mail client
+exec --no-startup-id thunderbird
 
+# Move mail client to workspace 4
+for_window [class="thunderbird"] move container to workspace "4"
 
 # i3-gaps
 gaps inner 6
