@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,run,ssh,filebrowser,drun";
+	modi: "drun,run,ssh";
     font: "Hack Nerd Font 12";
     location: 0;
 /*	yoffset: 0;*/
