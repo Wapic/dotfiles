@@ -38,7 +38,7 @@ inherit = bar/main
 width = 100%:-12px
 offset-x = 6px
 modules-left = i3
-modules-right = pulseaudio date powermenu
+modules-right = pulseaudio date
 modules-center = xwindow
 
 tray-position = right
@@ -219,6 +219,7 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
+ws-icon-4 = 9;ﱘ
 ws-icon-default = 
 
 format = <label-state> <label-mode>
