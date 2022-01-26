@@ -19,11 +19,19 @@ Plug 'neovim/nvim-lspconfig'
 
 Plug 'bignimbus/pop-punk.vim'
 
+Plug 'Mofiqul/vscode.nvim'
+
 Plug 'xiyaowong/nvim-transparent'
 
 call plug#end()
 
-colorscheme pop-punk
+let g:vscode_style = "dark"
+
+let g:vscode_transparency = 1
+
+let g:vscode_italic_comment = 1
+
+colorscheme vscode
 
 nnoremap <C-c> <cmd>CHADopen<cr>
 

@@ -48,7 +48,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -209,13 +209,15 @@ exec --no-startup-id picom -cb
 # Start polybar
 exec ~/scripts/polybar.sh
 
-#Disable mouse acceleration
-exec xinput set-prop 21 'libinput Accel Profile Enabled' 0 1
-exec xinput set-prop 8 'libinput Accel Profile Enabled' 0 1
+# Disable mouse acceleration
+exec xinput set-prop 21 'libinput Accel Profile Enabled' 0 1 # Wired
+exec xinput set-prop 8 'libinput Accel Profile Enabled' 0 1 # Wireless
 
-# assign workspaces to preferred monitors
+# Assign workspaces to preferred monitors
 workspace "1" output DVI-D-0
 workspace "2" output DP-4
+workspace "4" output DVI-D-0
+workspace "9" output DVI-D-0
 
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
@@ -225,17 +227,20 @@ exec --no-startup-id "element-desktop --disable-gpu"
 for_window [class="(?i)Discord"] move container to workspace "1"
 for_window [class="(?i)Element"] move container to workspace "1"
 
-# Auto start Workspace 2 programs
-exec --no-startup-id spotify-qt
-
-# Move programs to workspace 2
-for_window [class="spotify-qt"] move container to workspace "1"
-
 # Start mail client
 exec --no-startup-id thunderbird
 
 # Move mail client to workspace 4
-for_window [class="thunderbird"] move container to workspace "4"
+for_window [class="(?i)thunderbird"] move container to workspace "4"
+
+# Auto start Workspace 9
+exec --no-startup-id ardour6
+exec --no-startup-id cadence
+
+# Move to workspace 9
+for_window [class="(?i)cadence"] move container to workspace "9"
+for_window [class="(?i)ardour"] move container to workspace "9"
+for_window [class="spotify"] move container to workspace "9"
 
 # i3-gaps
 gaps inner 6
