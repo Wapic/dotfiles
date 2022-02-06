@@ -65,7 +65,7 @@ if ${use_color} ; then
 		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
-	alias ls='ls --color=auto'
+	alias ls='ls -X --color=auto'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
@@ -88,8 +88,9 @@ alias more=less
 alias clr="clear;neofetch"
 alias wpc="cd /home/wapic/.local/share/polymc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
 alias vim="nvim"
-alias ll="ls -X"
 alias aur="/home/wapic/scripts/aurbuild.py"
+alias wired="xinput set-prop 21 'libinput Accel Profile Enabled' 0 1"
+alias wireless="xinput set-prop 8 'libinput Accel Profile Enabled' 0 1"
 
 xhost +local:root > /dev/null 2>&1
 
