@@ -182,8 +182,8 @@ colors:
     background: '0x1e1e1e'
     foreground: '0xffffff'
   cursor:
-    background: '0xf0f0f0'
-    foreground: '0x26282a'
+    background: '0xd7ba7d'
+    foreground: '0x1e1e1e'
 
   # Normal colors
   normal:

@@ -39,26 +39,10 @@ width = 100%:-12px
 offset-x = 6px
 modules-left = i3
 modules-right = pulseaudio date
-modules-center = spotify-playing spotify-vol
+modules-center = xwindow 
 
 tray-position = right
 tray-padding = 2
-
-[bar/tray]
-inherit = bar/main
-width = 10%
-offset-x = 48%
-background = #a000
-
-modules-center = xwindow
-
-[bar/main-right]
-inherit = bar/main
-width = 2%
-offset-x = 98%:-6px
-modules-right = date
-
-background = #a000
 
 [bar/main]
 monitor = ${env:MONITOR:DP-4}
@@ -83,12 +67,7 @@ module-margin-right = 2
 override-redirect = true
 wm-restack = i3
 
-font-0 = Hack Nerd Font:pixelsize=12;2
-font-1 = Font Awesome 5 Free:pixelsize=12;2
-font-2 = Hack Nerd Font:pixelsize=20;4
-font-3 = Hack Nerd Font Mono:pixelsize=12;2
-font-4 = Hack Nerd Font:style=Regular:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:pixelsize=12;2
+font-0 = NotoSans Nerd Font:pixelsize=13;3
 
 [bar/secondary]
 inherit = bar/main
@@ -97,7 +76,7 @@ offset-x = 6px
 monitor = ${env:MONITOR:DVI-D-0}
 
 modules-left = i3
-modules-center =
+modules-center = spotify-playing spotify-vol
 modules-right = date
 
 ;[bar/example]
@@ -254,37 +233,38 @@ ws-icon-2 = 8;
 ws-icon-3 = 9;ﱘ
 ws-icon-default = 
 
-format = <label-state> <label-mode>
+format = <label-state>
 index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 1
+label-mode = %mode%
+label-mode-padding = 2
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%
+label-focused = %icon%  
 label-focused-background = #30ff
 label-focused-underline= #fff
-label-focused-padding = 2
+label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-padding = 2
+label-unfocused-padding = 3
 label-unfocused-background = #4111
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
 label-visible-background = #30ff
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 2
+label-visible-padding = 3
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 3
 
 ; Separator in between workspaces
 label-separator = |
