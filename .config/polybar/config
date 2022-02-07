@@ -62,7 +62,7 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 0
-module-margin-right = 2
+module-margin-right = 4
 
 override-redirect = true
 wm-restack = i3
