@@ -191,6 +191,9 @@ bindsym Print --release exec "import -window root screen.png;xclip -selection cl
 bindsym Mod1+Tab exec --no-startup-id rofi -modi "window" -show window
 bindsym Mod1+a move workspace to output next
 
+# Disable sleepmode
+exec --no-startup-id xset s off
+
 # Bind to restart polybar
 bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
@@ -241,6 +244,9 @@ exec --no-startup-id cadence
 # Move to workspace 9
 for_window [class="(?i)cadence"] move container to workspace "9"
 for_window [class="(?i)ardour"] move container to workspace "9"
+
+# origin being ass
+for_window [title="Origin"] floating enable
 
 # i3-gaps
 gaps inner 6
