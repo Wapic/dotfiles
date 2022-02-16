@@ -60,14 +60,13 @@ if __name__ == "__main__":
         printUsage()
         quit()  
     
-    action, package = sys.argv[1], req(sys.argv[2])
-    
+    action, package = sys.argv[1].lower(), req(sys.argv[2]) 
 
-    if action.lower() == "search":
+    if action == "search":
         for entries in package:
             print(entries["Name"])
     
-    elif action.lower() == "install":
+    elif action == "install":
         if len(package) == 1:
             installFirst(package)
         else:
