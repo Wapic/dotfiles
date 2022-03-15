@@ -53,6 +53,7 @@ radius = 0.0
 fixed-center = false
 
 background = #a000
+tray-background = #a000
 foreground = ${colors.foreground}
 
 line-size = ${values.line-size}
@@ -76,7 +77,7 @@ offset-x = 6px
 monitor = ${env:MONITOR:DVI-D-0}
 
 modules-left = i3
-modules-center = spotify-playing spotify-vol
+modules-center = 
 modules-right = date
 
 ;[bar/example]
@@ -131,7 +132,7 @@ modules-right = date
 [module/spotify-vol]
 type = custom/script
 
-exec = "spt pb -f '%v' -s"
+;exec = "spt pb -f '%v' -s"
 
 format = <label>
 format-prefix = " "
@@ -141,7 +142,7 @@ label = %output%%
 [module/spotify-playing]
 type = custom/script
 
-exec = "spt pb -f '%t - %a' -s"
+;exec = "spt pb -f '%t - %a' -s"
 
 click-left = spt pb -t
 double-click-left = spt pb -n
@@ -153,7 +154,7 @@ scroll-down = python $HOME/scripts/spotify-vol.py down
 format = <label>
 format-prefix = "  "
 
-tail = true
+tail = false
 
 label = %output:0:50%
 
