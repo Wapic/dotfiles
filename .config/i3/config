@@ -48,7 +48,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec i3-sensible-terminal -f "Hack Nerd Font Mono:style=Regular:size=12"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -191,14 +191,19 @@ bindsym Print --release exec "import -window root screen.png;xclip -selection cl
 bindsym Mod1+Tab exec --no-startup-id rofi -modi "window" -show window
 bindsym Mod1+a move workspace to output next
 
+# Floating python terminal
+bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal -c term_floating
+bindsym $mod+p exec --no-startup-id i3-sensible-terminal -c term_floating -e python 
+for_window [class="(?i)term_floating"] floating enable
+
 # Disable sleepmode
-exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms s off
 
 # Bind to restart polybar
 bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
 # Set the desktop background
-exec --no-startup-id feh --bg-scale /home/wapic/Downloads/background.jpg
+exec --no-startup-id feh --bg-scale /home/wapic/Downloads/WallpaperDog-5456105.png
 
 # Set main monitor as primary
 exec --no-startup-id xrandr --output DP-4 --primary --mode 2560x1440 --rate 144.0
@@ -245,13 +250,16 @@ exec --no-startup-id cadence
 for_window [class="(?i)cadence"] move container to workspace "9"
 for_window [class="(?i)ardour"] move container to workspace "9"
 
-# origin being ass
-for_window [title="Origin"] floating enable
+# Always floating
+for_window [title="(?i)Origin"] floating enable
+for_window [title="(?i)Steam"] floating enable
+for_window [title="(?i)mcp mapping viewer"] floating enable
 
 # i3-gaps
 gaps inner 6
 gaps bottom 28
 for_window [class=".*"] border pixel 0
+
 
 # Custom Colors
 # class                 border  backgr. text    indicator child_border
