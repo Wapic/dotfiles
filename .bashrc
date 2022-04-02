@@ -89,8 +89,13 @@ alias clr="clear;neofetch"
 alias wpc="cd /home/wapic/.local/share/polymc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
 alias vim="nvim"
 alias aur="/home/wapic/scripts/aurbuild.py"
-alias wired="xinput set-prop 21 'libinput Accel Profile Enabled' 0 1"
-alias wireless="xinput set-prop 8 'libinput Accel Profile Enabled' 0 1"
+alias mouseaccel="/home/wapic/scripts/mousefix.sh"
+alias tablet="/home/wapic/scripts/tablet.sh"
+alias hdd="cd /mnt/hdd/"
+alias ssd="cd /mnt/ssd/"
+alias screenshare="qjackctl -a ~/screenshare.xml"
+alias jackdefault="qjackctl -a ~/default.xml"
+alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/hdd/Music/"
 
 xhost +local:root > /dev/null 2>&1
 
