@@ -199,6 +199,9 @@ for_window [class="(?i)term_floating"] floating enable
 # Disable sleepmode
 exec --no-startup-id xset -dpms s off
 
+# Notification Daemon
+exec --no-startup-id wired -r
+
 # Bind to restart polybar
 bindsym $mod+Shift+T exec ~/scripts/polybar.sh
 
@@ -218,8 +221,7 @@ exec --no-startup-id picom -cb
 exec ~/scripts/polybar.sh
 
 # Disable mouse acceleration
-exec xinput set-prop 21 'libinput Accel Profile Enabled' 0 1 # Wired
-exec xinput set-prop 8 'libinput Accel Profile Enabled' 0 1 # Wireless
+exec ~/scripts/mousefix.sh
 
 # Assign workspaces to preferred monitors
 workspace "1" output DVI-D-0
@@ -242,24 +244,16 @@ exec --no-startup-id thunderbird
 # Move mail client to workspace 8
 for_window [class="(?i)thunderbird"] move container to workspace "8"
 
-# Auto start Workspace 9
-exec --no-startup-id ardour6
-exec --no-startup-id cadence
-
-# Move to workspace 9
-for_window [class="(?i)cadence"] move container to workspace "9"
-for_window [class="(?i)ardour"] move container to workspace "9"
-
 # Always floating
 for_window [title="(?i)Origin"] floating enable
-for_window [title="(?i)Steam"] floating enable
+for_window [class="(?i)Steam"] floating enable
 for_window [title="(?i)mcp mapping viewer"] floating enable
+for_window [class="keepassxc"] floating enable
 
 # i3-gaps
 gaps inner 6
 gaps bottom 28
 for_window [class=".*"] border pixel 0
-
 
 # Custom Colors
 # class                 border  backgr. text    indicator child_border
