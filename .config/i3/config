@@ -184,6 +184,7 @@ bindsym $mod+r mode "resize"
 
 # Screenshot binds
 bindsym $mod+Shift+s --release exec "import region.png;xclip -selection clipboard -t image/png -i region.png"
+bindsym $mod+Ctrl+s --release exec ~/scripts/ssUpload.sh
 bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) window.png;xclip -selection clipboard -t image/png -i window.png"
 bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
@@ -247,7 +248,7 @@ for_window [class="(?i)thunderbird"] move container to workspace "8"
 # Always floating
 for_window [title="(?i)Origin"] floating enable
 for_window [class="(?i)Steam"] floating enable
-for_window [title="(?i)mcp mapping viewer"] floating enable
+for_window [class="bspkrs-mmv-gui-MappingGui"] floating enable
 for_window [class="keepassxc"] floating enable
 
 # i3-gaps
