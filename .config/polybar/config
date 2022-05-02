@@ -232,7 +232,7 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 8;
 ws-icon-3 = 9;ﱘ
-ws-icon-default = 
+ws-icon-default = 
 
 format = <label-state>
 index-sort = true
@@ -246,24 +246,24 @@ label-mode-padding = 2
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%  
+label-focused = %index%  
 label-focused-background = #30ff
 label-focused-underline= #fff
 label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
+label-unfocused = %index%
 label-unfocused-padding = 3
 label-unfocused-background = #4111
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %icon%
+label-visible = %index%
 label-visible-background = #30ff
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 3
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %icon%
+label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
 
