@@ -1,3 +1,7 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.2
+ **/
 * {
     red:              IndianRed;
     lightgreen:       rgba ( 136, 204, 34, 100 % );
@@ -19,52 +23,58 @@
     highlight:        bold White;
 }
 window {
-    width:      24.0000em ;
-    height:     100.0000% ;
-    location:   west;
-    anchor:     west;
+    width:      35%;
+    height:     36.5000% ;
+    location:   center;
+    anchor:     center;
     border:     0px 2px 0px 0px ;
     text-color: var(white);
 }
 mode-switcher {
-    padding:          4px ;
-    background-color:  rgba ( 70, 70, 70, 60%);
-    border:           2px 0px 0px ;
+    padding:          0px ;
+    background-color:  rgba ( 70, 70, 70, 0%);
+    border:           0px 0px 0px ;
 }
 button selected {
     border-color: var(lightgreen);
     text-color:   var(lightgreen);
 }
-inputbar {
-    padding:          4px ;
-    background-color: rgba ( 70, 70, 70, 60%);
-    text-color:       white;
-    border:           0px 0px 2px ;
-}
+
 mainbox {
     background-color: rgba ( 20, 20, 20, 40%);
     expand:           true;
-    spacing:          1.0000em ;
+    spacing:          0.000em;
 }
+
 listview {
-    padding: 0.0000em 0.4000em 0.0000em 1.0000em ;
-    dynamic: false;
-    lines:   0;
+    margin: 0px;
+    padding: 0.0000em 0.4000em 0.0000em 0.0000em ;
+    dynamic: true;
+    columns: 6;
+}
+element-icon {
+    size: 6em;
 }
 element-text {
-    background-color: rgba ( 20, 20, 20, 60%);
-    text-color:       white;
+    background-color: rgba ( 20, 20, 20, 0%);
+    text-color: #ffffffdd;
+}
+element {
+    orientation: vertical;
+    children: [element-text, element-icon];
+    padding: 12px;
+    spacing: 4px;
 }
 element selected.normal {
-    background-color: cyan;
+    background-color: darkcyan;
 }
 element selected.active {
     background-color: var(lightblue);
-    text-color:       rgba(255,255,255,100%);
+    text-color:       rgba (20,20,20, 100%);
 }
 element selected.urgent {
     background-color: var(lightred);
-    text-color:       rgba(255,255,255,100%);
+    text-color:       rgba (20,20,20, 100%);
 }
 element normal.active {
     text-color: var(lightblue);

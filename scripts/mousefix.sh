@@ -1,4 +1,4 @@
-MOUSE=`xinput | grep "Glorious Model O Wireless \s" | grep -o "[0-9]*\s"`
+MOUSE=`xinput | grep "Compx X2 Mini Wireless \s" | grep -o "=[0-9]\{1,2\}" | grep -o "[0-9]\{1,2\}"`
 
 for i in $MOUSE;
 do

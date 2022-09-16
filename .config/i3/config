@@ -106,7 +106,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -189,13 +189,13 @@ bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) w
 bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
 # Workspace workflow
-bindsym Mod1+Tab exec --no-startup-id rofi -modi "window" -show window
-bindsym Mod1+a move workspace to output next
+bindsym $mod+Tab exec --no-startup-id rofi -modi "window" -show window -theme wapicalttab
+bindsym $mod+a move workspace to output next
 
-# Floating python terminal
+# Floating terminals
 bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal -c term_floating
-bindsym $mod+p exec --no-startup-id i3-sensible-terminal -c term_floating -e python 
-for_window [class="(?i)term_floating"] floating enable
+bindsym $mod+Shift+p exec --no-startup-id i3-sensible-terminal -c term_floating -e python 
+for_window [class="term_floating"] floating enable
 
 # Disable sleepmode
 exec --no-startup-id xset -dpms s off
@@ -232,7 +232,7 @@ workspace "9" output DVI-D-0
 workspace "2" output DP-4
 
 # Auto start Workspace 1 programs
-exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
+exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy" 
 exec --no-startup-id "element-desktop --disable-gpu"
 
 # Move programs to workspace 1
@@ -246,10 +246,10 @@ exec --no-startup-id thunderbird
 for_window [class="(?i)thunderbird"] move container to workspace "8"
 
 # Always floating
-for_window [title="(?i)Origin"] floating enable
+for_window [class="(?i)Origin"] floating enable
 for_window [class="(?i)Steam"] floating enable
 for_window [class="bspkrs-mmv-gui-MappingGui"] floating enable
-for_window [class="keepassxc"] floating enable
+for_window [class="KeePassXC"] floating enable
 
 # i3-gaps
 gaps inner 6

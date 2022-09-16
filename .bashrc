@@ -93,9 +93,9 @@ alias mouseaccel="/home/wapic/scripts/mousefix.sh"
 alias tablet="/home/wapic/scripts/tablet.sh"
 alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
-alias screenshare="qjackctl -a ~/screenshare.xml"
-alias jackdefault="qjackctl -a ~/default.xml"
+alias bigssd="cd /mnt/bigssd/"
 alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/hdd/Music/"
+alias cdmusic="cd /mnt/hdd/Music/"
 
 xhost +local:root > /dev/null 2>&1
 

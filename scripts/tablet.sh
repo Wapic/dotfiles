@@ -1,4 +1,4 @@
-TABLET=`xsetwacom --list devices | grep --max-count=1 -o "[0-9][0-9]"`
+TABLET=`xsetwacom --list devices | grep --max-count=1 -o "[0-9]"`
 
 xsetwacom --set $TABLET RawSample 1 &&
 xsetwacom --set $TABLET Suppress 0 &&
