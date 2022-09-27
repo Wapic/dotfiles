@@ -2,39 +2,19 @@
 import subprocess
 import sys
 
-def getUrl():
-    return input("enter url: ")
-
-def getFileFormat():
-    return input("file format: ")
-
-def downloadVideo(url, ff):
-    cmd = f"yt-dlp -o /home/wapic/yt-dl/%\(title\)s.%\(ext\)s {url}"
-    args = " -f mp4"
-    if ff != "mp4":
-        args += f" -x --audio-format {ff}"
-    subprocess.run(cmd + args, shell=True)
-
-def init(url, ff):
-    if url != "":
-        downloadVideo(url, ff)
-        quit()
-
-    url = getUrl()
-    if url == "":
-        print("please enter a url.")
-        init()
-
-    ff = getFileFormat()
-    if ff == "":
-        print("no file format specified. using mp4")
-        ff = "mp4"
-
-    downloadVideo(url, ff)
-    input("press enter to exit")
-
-if __name__ == "__main__":
+def main():
     if len(sys.argv) > 1:
         url, ff = sys.argv[1], sys.argv[2]
-        init(url, ff)
-    init("", "")
+    else:
+        url, ff = input("enter url: "), input("file format: ")
+
+    audioFormats = ("mp3", "m4a", "flac", "ogg", "wav", "aac")
+
+    cmd = ["yt-dlp", "-o", "/home/wapic/yt-dl/%(title)s.%(ext)s", "-f", "mp4", url]
+    if ff in audioFormats:
+        cmd.extend(["-x", "--audio-format", ff])
+
+    subprocess.run(cmd)
+
+if __name__ == "__main__":
+    main()
