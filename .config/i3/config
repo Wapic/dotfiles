@@ -224,6 +224,9 @@ exec ~/scripts/polybar.sh
 # Disable mouse acceleration
 exec ~/scripts/mousefix.sh
 
+# Password manager
+exec --no-startup-id "keepassxc"
+
 # Assign workspaces to preferred monitors
 workspace "1" output DVI-D-0
 workspace "8" output DVI-D-0
@@ -234,6 +237,7 @@ workspace "2" output DP-4
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy" 
 exec --no-startup-id "element-desktop --disable-gpu"
+
 
 # Move programs to workspace 1
 for_window [class="(?i)Discord"] move container to workspace "1"
