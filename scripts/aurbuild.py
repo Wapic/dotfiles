@@ -54,7 +54,7 @@ def build(name):
 def printUsage():
     print("Usage: aur <install/search> <package-name>")
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) < 3:
         print("Not enough arguments")
         printUsage()
@@ -75,3 +75,5 @@ if __name__ == "__main__":
         print(f"Unknown argument: {action}")
         printUsage()
 
+if __name__ == "__main__":
+    main()
