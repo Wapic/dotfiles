@@ -87,6 +87,7 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias clr="clear;neofetch"
 alias vim="nvim"
+alias cmake="make -j $(nproc)"
 
 alias aur="/home/wapic/scripts/aurbuild.py"
 alias mouseaccel="/home/wapic/scripts/mousefix.sh"
