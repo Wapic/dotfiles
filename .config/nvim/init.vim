@@ -7,6 +7,8 @@ set tabstop=4
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
