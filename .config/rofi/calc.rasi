@@ -17,7 +17,6 @@ window {
     anchor:     center;
     location:   center;
     width:      10%;
-    height:     56px;
     children:   [ horibox ];
 }
 horibox {
@@ -26,9 +25,9 @@ horibox {
 }
 listview {
     layout:     vertical;
-    spacing:    4px;
-    padding:    2px 2px;
-    lines:      2;
+    spacing:    6px;
+    dynamic:    false;
+    lines:      10;
 }
 entry {
     expand:     false;

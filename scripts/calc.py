@@ -1,18 +1,18 @@
 #! /usr/bin/python3
 import sys
 import re
- 
-def getZeros(str):
-    size = 0 
-    if str.endswith("k"):
-        size = 3
-    elif str.endswith("m"):
-        size = 6
-    elif str.endswith("b"):
-        size = 9
+from pathlib import Path
 
-    if not str.startswith("."):
-        size = size + len(str) - 1
+HISTORY = Path(f"{Path.home()}/.calchist")
+
+def getZeros(str):
+    size = 0 if str.startswith(".") else len(str) - 1
+    if str.endswith("k"):
+        size += 3
+    elif str.endswith("m"):
+        size += 6
+    elif str.endswith("b"):
+        size += 9
 
     str = re.sub("[.mbk]", "", str)
     str = str.ljust(size, "0")
@@ -29,12 +29,30 @@ def formatValues(user_input):
 
     return user_input
 
-def main():
-    user_input = sys.argv[1] if len(sys.argv) > 1 else None
+def main(): 
+    if not HISTORY.exists():
+        print(f"{HISTORY} not found")
+        return
+
+    with open(HISTORY) as fp:
+        lines = fp.readlines()
+    
+    user_input = sys.argv[1]+"\n" if len(sys.argv) > 1 else None 
+
     if user_input:
-        user_input = formatValues(user_input)
-        result = eval(user_input)
-        print(f"{result:,}")
+        if user_input not in lines:
+            lines.append(user_input)
+        formattedInput = formatValues(user_input)
+
+        result = eval(formattedInput)
+        print(f"={result:,}")
+
+        with open(HISTORY, "w") as fp:
+            fp.writelines(lines)
+
+    if lines:
+        print("\n".join(reversed(lines)))
+
 
 if __name__ == "__main__":
     main()

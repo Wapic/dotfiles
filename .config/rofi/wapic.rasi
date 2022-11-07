@@ -31,10 +31,6 @@ mode-switcher {
     background-color:  rgba ( 70, 70, 70, 60%);
     border:           2px 0px 0px ;
 }
-button selected {
-    border-color: var(lightgreen);
-    text-color:   var(lightgreen);
-}
 inputbar {
     padding:          4px ;
     background-color: rgba ( 70, 70, 70, 60%);
