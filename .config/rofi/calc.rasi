@@ -5,45 +5,36 @@
  */
 
 configuration{
-    drun-display-format: "{name}";
-    window-format: "[{w}  {c}   {t:1}]";
-    modi: "window";
-    combi-modi: "drun,run";
-    combi-hide-mode-prefix: true;
-    disable-history: true;
-    sort: true;
-    kb-move-char-back: "Control+b";
-    kb-move-char-forward: "Control+f";
-    kb-row-up: "Left,Up";
-    kb-row-down: "Right,Down,Alt+Tab";
+    modi: "calc:/home/wapic/scripts/calc.py";
 }
 * {
     background-color:      #181818;
     border-color:          White;
     text-color:           White;
-    font:            "Times New Roman 12";
+    font:            "Times New Roman 14";
 }
 window {
-    anchor:     north;
-    location:   north;
-    width:      100%;
+    anchor:     center;
+    location:   center;
+    width:      10%;
+    height:     56px;
     children:   [ horibox ];
 }
 horibox {
-    orientation: horizontal;
+    orientation: vertical;
     children:   [ prompt, entry, listview ];
 }
 listview {
-    layout:     horizontal;
-    spacing:    12px;
+    layout:     vertical;
+    spacing:    4px;
     padding:    2px 2px;
-    lines:      100;
-    height:     100px;
+    lines:      2;
 }
 entry {
     expand:     false;
-    width:      160px;
+    width:      100%;
     text-color: White;
+    horizontal-align: 0.5;
     padding: 0px 8px;
 }
 prompt {
@@ -55,6 +46,7 @@ element selected {
 }
 
 element-text{
+    horizontal-align: 0.5;
     background-color: inherit;
     text-color: White;
 }
