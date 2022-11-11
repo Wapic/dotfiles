@@ -198,7 +198,7 @@ bindsym $mod+Shift+Return exec --no-startup-id i3-sensible-terminal -c term_floa
 for_window [class="term_floating"] floating enable
 
 # Fast calc
-bindsym $mod+Shift+p exec --no-startup-id rofi -show calc -theme calc
+bindsym $mod+Shift+p exec --no-startup-id rofi -show calc -theme calc -no-show-match -monitor primary
 
 # Shadowplay
 bindsym $mod+F10 exec "killall --user $USER --ignore-case --signal SIGTERM ffmpeg"

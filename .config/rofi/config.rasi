@@ -137,7 +137,6 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-//@theme "lb"
 window {
     width: 50%;
     height: 50%;
