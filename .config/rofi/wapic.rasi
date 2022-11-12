@@ -1,44 +1,49 @@
+configuration {
+    modi: "drun,run";
+    font: "Hack Nerd Font 14";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
 * {
-    background-color: transparent;
-    text-color:       rgba ( 255, 238, 221, 100 % );
-    white:            rgba ( 187, 170, 153, 100 % );
+    darkCyan:           rgba(0,255,255,0.5);
+    text-color:         rgba(255, 255, 255, 1);
+    background-color:   rgba(0,0,0,0.2);
 }
+
 window {
-    width:      24.0000em ;
-    height:     100.0000% ;
-    location:   west;
-    anchor:     west;
-    border:     0px 2px 0px 0px ;
-    text-color: var(white);
+    width:          24.0000em;
+    height:         100%;
+    location:       west;
+    anchor:         west;
+    border:         2px;
+    border-color:   darkCyan;
 }
-mode-switcher {
-    padding:          4px ;
-    background-color:  rgba ( 70, 70, 70, 60%);
-    border:           2px 0px 0px ;
+
+prompt, mode-switcher {
+    enabled:    false;
 }
-inputbar {
-    padding:          4px ;
-    background-color: rgba ( 70, 70, 70, 60%);
-    text-color:       white;
-    border:           0px 0px 2px ;
+
+entry {
+    placeholder:    "Search...";
+    padding:        4px;
 }
-mainbox {
-    background-color: rgba ( 20, 20, 20, 40%);
-    expand:           true;
-    spacing:          1.0000em ;
-}
+
 listview {
-    padding: 0.0000em 0.4000em 0.0000em 1.0000em ;
-    dynamic: false;
-    lines:   0;
+    background-color: rgba(0,0,0,0);
+    padding: 4px;
 }
-element-text {
-    background-color: rgba ( 20, 20, 20, 60%);
-    text-color:       white;
+
+element, element-icon, element-text {
+    background-color:   inherit;
+    size:               1.42em;
+    vertical-align:     0.5;
 }
+
 element selected {
-    background-color: cyan;
+    background-color:   darkCyan;
 }
+
 error-message {
     padding:          1.0000em ;
     background-color: Red;

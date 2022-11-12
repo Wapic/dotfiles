@@ -1,12 +1,14 @@
+@theme "wapic.rasi"
+
 configuration {
-	modi: "drun,run,ssh";
-    font: "Hack Nerd Font 12";
-    location: 0;
+/*  modi: "drun,run,ssh";*/
+/*  font: "Hack Nerd Font 12";*/
+/*  location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	show-icons: true;
-	terminal: "st";
+/*	show-icons: true;*/
+/*	terminal: "st";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -18,15 +20,15 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
-	drun-display-format: "{name}";
+/*	drun-display-format: "{name}";*/
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-	sort: false;
-	sorting-method: "normal";
-	case-sensitive: false;
+/*  sort: false;*/
+/*	sorting-method: "normal";*/
+/*	case-sensitive: false;*/
 /*	cycle: true;*/
-	sidebar-mode: true;
+/*	sidebar-mode: true;*/
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
@@ -137,16 +139,3 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-window {
-    width: 50%;
-    height: 50%;
-}
-timeout {
-    action: "kb-cancel";
-    delay:  0;
-}
-filebrowser {
-    directories-first: true;
-    sorting-method:    "name";
-}
-@theme "wapic.rasi"
