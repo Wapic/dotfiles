@@ -190,7 +190,7 @@ bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) w
 bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
 # Workspace workflow
-bindsym $mod+Tab exec --no-startup-id rofi -modi "window" -show window -theme wapicalttab
+bindsym $mod+Tab exec --no-startup-id rofi -modi "window" -show window -monitor primary -theme wapicalttab
 bindsym $mod+a move workspace to output next
 
 # Floating terminals
@@ -202,7 +202,6 @@ bindsym $mod+Shift+p exec --no-startup-id rofi -show calc -theme calc -no-show-m
 
 # Shadowplay
 bindsym $mod+F10 exec "killall --user $USER --ignore-case --signal SIGTERM ffmpeg"
-exec --no-startup-id shadowreplay
 
 # Disable sleepmode
 exec --no-startup-id xset -dpms s off
