@@ -48,7 +48,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -f "Hack Nerd Font Mono:style=Regular:size=12"
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal -f "Hack Nerd Font Mono:style=Regular:size=12"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -184,10 +184,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Screenshot binds
-bindsym $mod+Shift+s --release exec "import region.png;xclip -selection clipboard -t image/png -i region.png"
-bindsym $mod+Ctrl+s --release exec ~/scripts/ssUpload.sh
-bindsym $mod+Print --release exec "import -window $(xdotool getwindowfocus -f) window.png;xclip -selection clipboard -t image/png -i window.png"
-bindsym Print --release exec "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
+bindsym $mod+Shift+s --release exec --no-startup-id "import region.png;xclip -selection clipboard -t image/png -i region.png"
+bindsym $mod+Ctrl+s --release exec --no-startup-id ~/scripts/ssUpload.sh
+bindsym $mod+Print --release exec --no-startup-id "import -window $(xdotool getwindowfocus -f) window.png;xclip -selection clipboard -t image/png -i window.png"
+bindsym Print --release exec --no-startup-id "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
 # Workspace workflow
 bindsym $mod+Tab exec --no-startup-id rofi -modi "window" -show window -monitor primary -theme wapicalttab
