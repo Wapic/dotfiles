@@ -238,8 +238,6 @@ workspace "1" output DVI-D-0
 workspace "8" output DVI-D-0
 workspace "9" output DVI-D-0
 
-workspace "2" output DP-4
-
 # Auto start Workspace 1 programs
 exec --no-startup-id "discord" 
 exec --no-startup-id "element-desktop --disable-gpu"
@@ -253,6 +251,12 @@ exec --no-startup-id thunderbird
 
 # Move mail client to workspace 8
 for_window [class="(?i)thunderbird"] move container to workspace "8"
+
+# Auto start Workspace 9
+exec --no-startup-id psst-gui
+
+# Move programs to workspace 9
+for_window [class="(?)psst-gui"] move container to workspace "9"
 
 # Always floating
 for_window [class="(?i)Origin"] floating enable
