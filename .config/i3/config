@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 
 # Screenshot binds
 bindsym $mod+Shift+s --release exec --no-startup-id "import region.png;xclip -selection clipboard -t image/png -i region.png"
-bindsym $mod+Ctrl+s --release exec --no-startup-id ~/scripts/ssUpload.sh
+bindsym $mod+Ctrl+s --release exec --no-startup-id ~/scripts/imgurUpload.py
 bindsym $mod+Print --release exec --no-startup-id "import -window $(xdotool getwindowfocus -f) window.png;xclip -selection clipboard -t image/png -i window.png"
 bindsym Print --release exec --no-startup-id "import -window root screen.png;xclip -selection clipboard -t image/png -i screen.png"
 
