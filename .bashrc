@@ -80,6 +80,7 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+# QOL ALIASES
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -89,18 +90,22 @@ alias clr="clear;neofetch"
 alias vim="nvim"
 alias cmake="make -j $(nproc)"
 
+# SCRIPTS
 alias aur="/home/wapic/scripts/aurbuild.py"
 alias mouseaccel="/home/wapic/scripts/mousefix.sh"
 alias tablet="/home/wapic/scripts/tablet.sh"
 alias yt-dl="/home/wapic/scripts/yt-dl.py"
 
-alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/hdd/Music/"
-
-alias wpc="cd /home/wapic/.local/share/polymc/instances/1.8.9/.minecraft/config/ChatTriggers/modules"
+# CHANGE DIR
+alias wpc="cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/.minecraft/config/ChatTriggers/modules/"
+alias nvssd="cd /mnt/nvssd/"
 alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
 alias cdmusic="cd /mnt/hdd/Music/"
+
+# ETC
+alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/hdd/Music/"
 
 xhost +local:root > /dev/null 2>&1
 
@@ -142,8 +147,3 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION
