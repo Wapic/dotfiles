@@ -1,0 +1,21 @@
+window {
+    border:         2px solid cyan;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#input {
+    border: none;
+    background-color: rgba(0,255,255,0.1);
+}
+
+#entry {
+    margin: 2px 4px 2px 4px;
+}
+
+#text {
+    color: white;
+}
+#entry:selected {
+    background-color:   rgba(0,255,255,0.3);
+    border: 1px solid black;
+}
