@@ -1,4 +1,3 @@
-#
 # ~/.bashrc
 #
 
@@ -80,32 +79,37 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+HISTSIZE= HISTFILESIZE= # Infinite history
+#
+alias sudo='sudo '
 # QOL ALIASES
-alias cp="cp -i"                          # confirm before overwriting something
+alias cp='cp -i'                         # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias clr="clear;neofetch"
-alias vim="nvim"
-alias cmake="make -j $(nproc)"
+alias clr='clear;neofetch'
+alias vim='nvim'
+alias cmake='make -j $(nproc)'
+alias plz='sudo !!'
 
 # SCRIPTS
-alias aur="/home/wapic/scripts/aurbuild.py"
-alias mouseaccel="/home/wapic/scripts/mousefix.sh"
-alias tablet="/home/wapic/scripts/tablet.sh"
-alias yt-dl="/home/wapic/scripts/yt-dl.py"
+alias aur='/home/wapic/scripts/aurbuild.py'
+alias mouseaccel='/home/wapic/scripts/mousefix.sh'
+alias tablet='/home/wapic/scripts/tablet.sh'
+alias yt-dl='/home/wapic/scripts/yt-dl.py'
 
 # CHANGE DIR
-alias wpc="cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/.minecraft/config/ChatTriggers/modules/"
-alias nvssd="cd /mnt/nvssd/"
+alias wpc='cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/.minecraft/config/ChatTriggers/modules/'
+alias nvssd='cd /mnt/nvssd/'
 alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
-alias cdmusic="cd /mnt/hdd/Music/"
-
+alias cdmusic="cd /mnt/nvssd/Sync/Music/"
+alias cdvideos="cd /mnt/nvssd/Videos/"
+alias backup="cd /mnt/nvssd/Sync/Default\ Folder/backup/"
 # ETC
-alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/hdd/Music/"
+alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/nvssd/Sync/Music/"
 
 xhost +local:root > /dev/null 2>&1
 
@@ -122,7 +126,11 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
+# zip files with 1 argument
+zig () {
+    tar czvf "$1.tar.gz" "$1/"
+}
+
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
@@ -147,3 +155,4 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+export PATH=/home/wapic/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/wapic/.dotnet/tools:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-killall -q polybar
+killall -q waybar
 
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+while pgrep -u $UID -x waybar >/dev/null; do sleep 1; done
 
-polybar main-left &
-polybar secondary &
+waybar

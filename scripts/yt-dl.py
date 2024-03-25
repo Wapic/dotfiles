@@ -10,7 +10,7 @@ def main():
 
     audioFormats = ("mp3", "m4a", "flac", "ogg", "wav", "aac")
 
-    cmd = ["yt-dlp", "-o", "/home/wapic/yt-dl/%(title)s.%(ext)s", "-f", "mp4", url]
+    cmd = ["yt-dlp", "-o", "/mnt/nvssd/yt-dl/%(title)s.%(ext)s", "-f", "mp4", url]
     if ff in audioFormats:
         cmd.extend(["-x", "--audio-format", ff])
 

@@ -1,7 +1,6 @@
 #! /usr/bin/python3
 import sys
 import re
-import pyperclip
 from pathlib import Path
 
 HISTORY = Path(f"{Path.home()}/.calchist")
