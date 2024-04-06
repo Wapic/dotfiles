@@ -6,7 +6,7 @@
 colors() {
 	local fgc bgc vals seq0
 
-	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+    printf "Color escapes are %s\n" '\e[${value};...;${value}m'
 	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
 	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
 	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
@@ -80,9 +80,9 @@ fi
 unset use_color safe_term match_lhs sh
 
 HISTSIZE= HISTFILESIZE= # Infinite history
-#
-alias sudo='sudo '
+
 # QOL ALIASES
+alias sudo='sudo '
 alias cp='cp -i'                         # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -95,7 +95,6 @@ alias plz='sudo !!'
 
 # SCRIPTS
 alias aur='/home/wapic/scripts/aurbuild.py'
-alias mouseaccel='/home/wapic/scripts/mousefix.sh'
 alias tablet='/home/wapic/scripts/tablet.sh'
 alias yt-dl='/home/wapic/scripts/yt-dl.py'
 
@@ -107,7 +106,8 @@ alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
 alias cdmusic="cd /mnt/nvssd/Sync/Music/"
 alias cdvideos="cd /mnt/nvssd/Videos/"
-alias backup="cd /mnt/nvssd/Sync/Default\ Folder/backup/"
+alias desktop="cd /home/wapic/.local/share/applications"
+
 # ETC
 alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/nvssd/Sync/Music/"
 
