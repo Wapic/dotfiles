@@ -178,31 +178,25 @@ workspace $ws9 output $left_monitor
 # Auto start Workspace 1 programs
 exec vesktop --ozone-platform-hint=auto 
 exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
-
-# Move programs to workspace 1
 for_window [app_id="vesktop"] move container to workspace 1
 for_window [app_id="Element"] move container to workspace 1
 
 # Start mail client
 exec thunderbird
-
-# Move mail client to workspace 8
 for_window [app_id="thunderbird"] move container to workspace 8
 
 # Auto start Workspace 9
 exec spotify-launcher
-
-# Move programs to workspace 9
 for_window [title="Spotify Premium"] move container to workspace 9
 
-# Always floating
+# KeePass
+exec keepassxc
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 
 # Background services
 exec wired -r
-exec keepassxc
 exec syncthing
 exec waybar
 
-# exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 include /etc/sway/config.d/*
