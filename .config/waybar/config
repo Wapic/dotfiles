@@ -6,11 +6,11 @@
 
 	"modules-left": [
 	    "custom/right-arrow-light",	
-        "sway/workspaces",
+        "hyprland/workspaces",
 		"custom/right-arrow-dark"
 	],
     "modules-center": [
-        "sway/window",
+        "hyprland/window",
     ],
 	"modules-right": [
 		"custom/left-arrow-dark",
@@ -40,9 +40,9 @@
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
+	"hyprland/workspaces": {
 		"disable-scroll": true,
-		"format": "{name}"
+		"format": "{id}"
 	},
 	"clock": {
         "format": "{:%H:%M}  ",
@@ -105,7 +105,7 @@
 			""
 		]
 	},
-    "sway/window": {
+    "hyprland/window": {
         "format": "{title}",
         "icon": true,
         "max-length": 50,

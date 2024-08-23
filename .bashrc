@@ -3,33 +3,6 @@
 
 [[ $- != *i* ]] && return
 
-colors() {
-	local fgc bgc vals seq0
-
-    printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
-
-	# foreground colors
-	for fgc in {30..37}; do
-		# background colors
-		for bgc in {40..47}; do
-			fgc=${fgc#37} # white
-			bgc=${bgc#40} # black
-
-			vals="${fgc:+$fgc;}${bgc}"
-			vals=${vals%%;}
-
-			seq0="${vals:+\e[${vals}m}"
-			printf "  %-9s" "${seq0:-(default)}"
-			printf " ${seq0}TEXT\e[m"
-			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-		done
-		echo; echo
-	done
-}
-
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 use_color=true
@@ -83,15 +56,14 @@ HISTSIZE= HISTFILESIZE= # Infinite history
 
 # QOL ALIASES
 alias sudo='sudo '
+alias plz='sudo !!'
 alias cp='cp -i'                         # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias clr='clear;neofetch'
 alias vim='nvim'
 alias cmake='make -j $(nproc)'
-alias plz='sudo !!'
 
 # SCRIPTS
 alias aur='/home/wapic/scripts/aurbuild.py'
@@ -105,11 +77,11 @@ alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
 alias cdmusic="cd /mnt/nvssd/Sync/Music/"
-alias cdvideos="cd /mnt/nvssd/Videos/"
 alias desktop="cd /home/wapic/.local/share/applications"
 
 # ETC
 alias mvmusic="mv /home/wapic/Downloads/*.flac /mnt/nvssd/Sync/Music/"
+alias ssh="kitten ssh "
 
 xhost +local:root > /dev/null 2>&1
 

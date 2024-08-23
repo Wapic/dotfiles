@@ -19,8 +19,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'bignimbus/pop-punk.vim'
-
 Plug 'Mofiqul/vscode.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
@@ -35,7 +33,7 @@ let g:vscode_italic_comment = 1
 
 colorscheme vscode
 
-nnoremap <C-c> <cmd>CHADopen<cr>
+nnoremap <C-o> <cmd>CHADopen<cr>
 
 nnoremap <C-a> <ESC>^
 
@@ -44,8 +42,6 @@ nnoremap <C-e> <ESC>$
 map q <Nop>
 
 let g:coq_settings = { 'auto_start': 'shut-up' }
-
-let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
 let g:transparent_enabled = v:true
 
