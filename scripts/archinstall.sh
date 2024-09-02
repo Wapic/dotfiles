@@ -106,7 +106,7 @@ if [ $continue == "user" ]; then
     
     if [ $displayServer == "wayland" ]; then
         pacman -S wayland hyprland wofi waybar swaybg swayimg wl-clipboard mako slurp grime
-        echo '#! /bin/sh\n exec Hyprland' > /etc/lemurs/wayland/hyprland
+        echo -e '#! /bin/sh\nexec Hyprland' > /etc/lemurs/wayland/hyprland
         chmod 755 /etc/lemurs/wayland/hyprland
     fi
 
