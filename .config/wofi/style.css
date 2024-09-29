@@ -1,0 +1,36 @@
+window {
+    border:         1px solid #33ccff;
+    background-color: rgba(41,43,46,0.95);
+}
+
+#input {
+    border: none;
+    background-color: rgba(26,26,26,0.8);
+    color: white;
+    margin: 2px 2px 0px 2px;
+    outline: none;
+}
+
+#entry {
+    margin: 0px;
+}
+
+#entry:selected {
+    outline: none;
+    background-color: rgba(26,26,26,0.8);
+    margin: 0px 2px 0px 2px;
+    padding-left: 8px;
+}
+
+#innerbox {
+    margin: -2px;
+}
+
+#scroll {
+    padding: 0px 0px 4px 0px;
+}
+
+#text {
+    color: white;
+}
+
