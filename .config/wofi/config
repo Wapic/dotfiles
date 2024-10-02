@@ -1,6 +1,6 @@
 show=drun
-height=1409px
-width=20%
-xoffset=0px
+prompt=Search
 allow_images=true
+image_size=32px
 hide_scroll=true
+insensitive=true

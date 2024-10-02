@@ -52,13 +52,17 @@ window#waybar {
 	padding: 0 2px;
 	color: #fdf6e3;
 }
-
 #workspaces button.active {
 	color: #268bd2;
 }
 
 #workspaces button:hover {
-	background: #245da4;
+	text-shadow: inherit;
+	box-shadow: inherit;
+	background: #101010;
+    border: #101010;
+    padding: 0 2px;
+    color: #268bd2;
 }
 
 #pulseaudio {
