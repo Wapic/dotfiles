@@ -10,8 +10,6 @@ autoload -U compinit; compinit
 # case insensitive completion only if no case sensitive matches found
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-
-
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/wapic.zsh-theme
 
