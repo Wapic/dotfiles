@@ -26,3 +26,4 @@ alias desktop="cd /home/wapic/.local/share/applications"
 
 # ETC
 alias ssh="kitten ssh "
+alias find="fzf --preview='/home/wapic/scripts/fzf-preview.sh {}' "
