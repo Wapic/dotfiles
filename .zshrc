@@ -1,5 +1,5 @@
 export ZSH_FOLDER="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$ZSH_FOLDER/.zhistory"
+export HISTFILE="$HOME/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
@@ -12,7 +12,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 
 
-source $HOME/.config/zsh/aliases.zsh
-source $HOME/.config/zsh/wapic.zsh-theme
+source $ZSH_FOLDER/aliases.zsh
+source $ZSH_FOLDER/wapic.zsh-theme
 
 source <(fzf --zsh)
