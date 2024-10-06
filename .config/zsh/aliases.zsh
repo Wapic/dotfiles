@@ -9,10 +9,10 @@ alias more=less
 alias vim='nvim'
 alias cmake='make -j $(nproc)'
 alias ls='ls -X --color=always'
+alias xprop="hyprprop"
 
 # SCRIPTS
 alias aur='/home/wapic/scripts/aurbuild.py'
-alias tablet='/home/wapic/scripts/tablet.sh'
 alias yt-dl='/home/wapic/scripts/yt-dl.py'
 
 # CHANGE DIR
@@ -21,8 +21,6 @@ alias nvssd='cd /mnt/nvssd/'
 alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
-alias cdmusic="cd /mnt/nvssd/Sync/Music/"
-alias desktop="cd /home/wapic/.local/share/applications"
 
 # ETC
 alias ssh="kitten ssh "

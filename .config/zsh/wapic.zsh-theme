@@ -20,7 +20,7 @@ add-zsh-hook precmd vcs_info
 # %u: unstaged changes %
 
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' formats '%K{%u}%F{236}  %b %k%F{%u}%f'
+zstyle ':vcs_info:*' formats '%K{%u}%F{black}  %b %k%F{%u}%f'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git+set-message:*' hooks isDirty
 zstyle ':vcs_info:-quilt-+no-vcs:*' hooks setDir
@@ -29,18 +29,18 @@ zstyle ':vcs_info:-quilt-+no-vcs:*' hooks setDir
 setopt PROMPT_SUBST
 
 +vi-setDir() {
-    PROMPT_DIR='%F{236} %1~ %k%F{0004}%f'
+    PROMPT_DIR='%F{black} %1~ %k%F{0004}%f'
 }
 
 +vi-isDirty() {
     if [[ $(git status --porcelain --ignore-submodules) ]]; then
         hook_com[unstaged]="yellow"
-        PROMPT_DIR='%F{236} %1~ %k%K{yellow}%F{0004}%f%k'
+        PROMPT_DIR='%F{black} %1~ %k%K{yellow}%F{0004}%f%k'
     else
         hook_com[unstaged]="green"
-        PROMPT_DIR='%F{236} %1~ %k%K{green}%F{0004}%f%k'
+        PROMPT_DIR='%F{black} %1~ %k%K{green}%F{0004}%f%k'
     fi
 }
 
-PROMPT_USER='%K{236}%F{green} %n@%m%f %k%K{0004}%F{236}%f'
+PROMPT_USER='%K{black}%F{green} %n@%m%f %k%K{0004}%F{black}%f'
 PROMPT='$PROMPT_USER$PROMPT_DIR${vcs_info_msg_0_}%f%k%b '

@@ -1,5 +1,3 @@
-syntax on
-set termguicolors
 set number
 set expandtab
 set shiftwidth=4
@@ -59,8 +57,17 @@ let g:transparent_enabled = v:true
 
 lua << EOF
 require'nvim-treesitter.configs'.setup ({
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "markdown", "bash", "cpp", "html", "json", "python", "rust", "toml"},
+    auto_install = true,
+
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = false,
   },
 })
+
+local lsp = require "lspconfig"
+local coq = require "coq"
+
+lsp.ts_ls.setup(coq.lsp_ensure_capabilities({}))
 EOF
