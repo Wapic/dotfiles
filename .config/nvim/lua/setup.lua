@@ -1,4 +1,3 @@
-
 -- Colorscheme setup
 local vscode = require "vscode"
 local colors = require "vscode.colors"
