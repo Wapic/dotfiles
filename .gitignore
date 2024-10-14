@@ -1,40 +1,65 @@
-.bashrc
-.bash_history
-.bash_profile
-.bash_logout
-.zhistory
-.python_history
-.gitconfig
-.nvidia-settings-rc
-.histfile
-.lesshst
-.pulse-cookie
-.steampath
-.steampid
-.viminfo
-*.restore
+##########
+### ~/ ###
+##########
+*
+!.zshrc
+!.gitignore
+!.drirc
 
-.zcompdump
-.zcompdump-*
-.zcompdump-*.zwc
+#################
+### ~/scripts ###
+#################
+!scripts/
+!scripts/aurbuild.py
+!scripts/calc.py
+!scripts/fzf-preview.sh
+!scripts/killwine.sh
+!scripts/yt-dl.py
+!scripts/imgurUpload.sh
 
-.cache/*
-.cargo/*
-.ssh/*
-.pki/*
-.mozilla/*
-.m2/*
-.java/*
-.local/*
-.gnupg/*
-.gradle/*
+#################
+### ~/.config ###
+#################
+!.config/
 
-bigssd
-nvssd
-ssd
+# Neovim
+!.config/nvim/
+!.config/nvim/init.lua
+!.config/nvim/lua/
+!.config/nvim/lua/keybinds.lua
+!.config/nvim/lua/setup.lua
 
-.config/nvim/*
-!.config/nvim/init.vim
+# Hyprland
+!.config/hypr/
+!.config/hypr/hyprland.conf
+!.config/hypr/hyprpaper.conf
+!.config/hypr/hypridle.conf
+!.config/hypr/xdph.conf
+!.config/hypr/wallpaper.png
 
-.config/*
-*/*
+# Dunst
+!.config/dunst/
+!.config/dunst/dunstrc
+
+# Kitty
+!.config/kitty/
+!.config/kitty/kitty.conf
+
+# Btop
+!.config/btop/
+!.config/btop/btop.conf
+
+# zsh
+!.config/zsh/
+!.config/zsh/aliases.zsh
+!.config/zsh/wapic.zsh-theme
+
+# Wofi
+!.config/wofi/
+!.config/wofi/config
+!.config/wofi/style.css
+
+# Waybar
+!.config/waybar/
+!.config/waybar/config
+!.config/waybar/style.css
