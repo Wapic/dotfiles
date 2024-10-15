@@ -13,6 +13,9 @@
         "hyprland/window",
     ],
 	"modules-right": [
+        "custom/left-arrow-dark",
+        "battery",
+        "custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
@@ -91,18 +94,26 @@
 		"on-click-right": "pavucontrol"
 	},
 	"battery": {
+        "interval": 5,
 		"states": {
-			"good": 95,
+			"good": 60,
 			"warning": 30,
 			"critical": 15
 		},
 		"format": "{icon} {capacity}%",
+        "tooltip-format": "Max capacity: {health}%\n{timeTo}",
+        "format-charging": "{icon}󱐋 {capacity}%",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󱟢",
 		]
 	},
     "hyprland/window": {
