@@ -10,12 +10,7 @@
 ### ~/scripts ###
 #################
 !scripts/
-!scripts/aurbuild.py
-!scripts/calc.py
-!scripts/fzf-preview.sh
-!scripts/killwine.sh
-!scripts/yt-dl.py
-!scripts/imgurUpload.sh
+!scripts/*
 
 #################
 ### ~/.config ###
@@ -26,24 +21,19 @@
 !.config/nvim/
 !.config/nvim/init.lua
 !.config/nvim/lua/
-!.config/nvim/lua/keybinds.lua
-!.config/nvim/lua/setup.lua
+!.config/nvim/lua/*
 
 # Hyprland
 !.config/hypr/
-!.config/hypr/hyprland.conf
-!.config/hypr/hyprpaper.conf
-!.config/hypr/hypridle.conf
-!.config/hypr/xdph.conf
-!.config/hypr/wallpaper.png
+!.config/hypr/*
 
 # Dunst
 !.config/dunst/
-!.config/dunst/dunstrc
+!.config/dunst/*
 
 # Kitty
 !.config/kitty/
-!.config/kitty/kitty.conf
+!.config/kitty/*
 
 # Btop
 !.config/btop/
@@ -51,15 +41,12 @@
 
 # zsh
 !.config/zsh/
-!.config/zsh/aliases.zsh
-!.config/zsh/wapic.zsh-theme
+!.config/zsh/*
 
 # Wofi
 !.config/wofi/
-!.config/wofi/config
-!.config/wofi/style.css
+!.config/wofi/*
 
 # Waybar
 !.config/waybar/
-!.config/waybar/config
-!.config/waybar/style.css
+!.config/waybar/*
