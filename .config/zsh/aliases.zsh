@@ -8,7 +8,7 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias vim='nvim'
 alias cmake='make -j $(nproc)'
-alias ls='ls -X --color=always'
+alias ls='ls --group-directories-first -X --color=always'
 alias xprop="hyprprop"
 
 # SCRIPTS
