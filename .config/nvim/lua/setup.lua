@@ -31,7 +31,7 @@ local lsp = require "lspconfig"
 local coq = require "coq"
 
 vim.g.coq_settings = { 
-    auto_start = 'shut-up' 
+    auto_start = true 
 }
 
 lsp.ts_ls.setup(coq.lsp_ensure_capabilities({}))
