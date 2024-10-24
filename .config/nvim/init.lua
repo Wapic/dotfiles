@@ -27,6 +27,10 @@ Plug('ms-jpq/coq.artifacts', {
 	['branch'] = 'artifacts'
 })
 
+Plug('ms-jpq/coq.thirparty', {
+    ['branch'] = '3p'
+})
+
 Plug('ms-jpq/chadtree', { 
 	['branch'] = 'chad',
 	['do'] = 'python3 -m chadtree deps'
