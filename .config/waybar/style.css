@@ -17,7 +17,7 @@ window#waybar {
 	color: #292b2e;
 	background: #1a1a1a;
 }
-
+#network,
 #workspaces,
 #clock,
 #pulseaudio,
@@ -25,6 +25,7 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
+#bluetooth,
 #tray {
 	background: #1a1a1a;
 }
@@ -66,10 +67,7 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #268bd2;
-}
-#memory {
-	color: #2aa198;
+    color: #268bd2;
 }
 #cpu {
 	color: #6c71c4;
@@ -80,13 +78,15 @@ window#waybar {
 #disk {
 	color: #b58900;
 }
+#bluetooth {
+    color: #2aa198;
+}
 
+#bluetooth,
 #clock,
 #pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk {
+#network,
+#battery {
 	padding: 0 10px;
 }
 
