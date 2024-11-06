@@ -32,7 +32,7 @@ treesitter.setup({
 -- LSP / Autocompletion setup
 
 vim.g.coq_settings = { 
-    auto_start = true, 
+    auto_start = "shut-up", 
 }
 
 local lsp = require "lspconfig"
