@@ -15,10 +15,6 @@ Plug('junegunn/fzf', {
     end 
 })
 
-Plug('mg979/vim-visual-multi', {
-	['branch'] = 'master'
-})
-
 Plug('ms-jpq/coq_nvim', {
 	['branch'] = 'coq'
 })
@@ -27,7 +23,7 @@ Plug('ms-jpq/coq.artifacts', {
 	['branch'] = 'artifacts'
 })
 
-Plug('ms-jpq/coq.thirparty', {
+Plug('ms-jpq/coq.thirdparty', {
     ['branch'] = '3p'
 })
 
@@ -42,9 +38,13 @@ Plug('nvim-treesitter/nvim-treesitter', {
 
 Plug('neovim/nvim-lspconfig')
 
-Plug('Mofiqul/vscode.nvim')
+Plug('nvim-lualine/lualine.nvim')
+
+Plug('nvim-tree/nvim-web-devicons')
+
+Plug('navarasu/onedark.nvim')
 
 vim.call('plug#end')
 
-require("keybinds")
 require("setup")
+require("keybinds")

@@ -1,17 +1,20 @@
--- Colorscheme setup
-local vscode = require "vscode"
-local colors = require "vscode.colors"
+-- Appearance setup
+local onedark = require "onedark"
+local lualine = require "lualine"
 
-colors.get_colors()
+onedark.setup {
+    style = 'darker'
+}
 
-vscode.setup({
-    transparent = true,
-    italic_comments = true,
-    underline_links = true,
-    disable_nvimtree_bg = true,
+vim.cmd("colorscheme onedark")
+lualine.setup({
+    options = {
+        them = "auto",
+    },
 })
 
-vscode.load('dark')
+-- lualine setup
+
 
 -- Treesitter setup
 local treesitter = require "nvim-treesitter.configs"
