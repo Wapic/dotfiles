@@ -1,11 +1,11 @@
 * {
 	font-size: 20px;
-	font-family: monospace;
+	font-family: Fira Code Nerd Font Regular;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+	background: #1f2329;
+	color: #a0a8b7;
 }
 
 #custom-right-arrow-dark,
@@ -14,46 +14,24 @@ window#waybar {
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #292b2e;
+	color: #1f2329;
 	background: #1a1a1a;
 }
 
 #workspaces,
 #clock,
 #pulseaudio,
-#memory,
-#cpu,
 #battery,
-#disk,
 #tray {
 	background: #1a1a1a;
 }
 
-#pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-#pulseaudio-slider trough {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: black;
-}
-#pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: green;
-}
-
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+    color: #a0a8b7;
 }
 #workspaces button.active {
-	color: #268bd2;
+	color: #4581eb;
 }
 
 #workspaces button:hover {
@@ -62,23 +40,11 @@ window#waybar {
 	background: #101010;
     border: #101010;
     padding: 0 2px;
-    color: #268bd2;
+    color: #a0a8b7;
 }
 
 #pulseaudio {
-	color: #268bd2;
-}
-#memory {
-	color: #2aa198;
-}
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-#disk {
-	color: #b58900;
+	color: #4581eb;
 }
 
 #clock,

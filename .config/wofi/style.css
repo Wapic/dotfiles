@@ -1,11 +1,11 @@
 window {
     border:         1px solid #33ccff;
-    background-color: rgba(41,43,46,0.95);
+    background-color: rgba(31,35,41,1.00);
 }
 
 #input {
     border: none;
-    background-color: rgba(26,26,26,0.8);
+    background-color: rgba(26,26,26,1.0);
     color: white;
     margin: 2px 2px 0px 2px;
     outline: none;
