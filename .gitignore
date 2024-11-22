@@ -52,3 +52,12 @@
 # Waybar
 !.config/waybar/
 !.config/waybar/*
+
+# GTK-Theme
+!.gtkrc-2.0
+!.icons/default/
+!.icons/default/index.theme
+!.config/gtk-3.0/
+!.config/gtk-3.0/settings.ini
+!.config/xsettingsd/
+!.config/xsettingsd/xsettingsd.conf
