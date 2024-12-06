@@ -1,36 +1,18 @@
 window {
-    border:         1px solid #33ccff;
-    background-color: rgba(31,35,41,1.00);
+    border:         1px solid #05625E;
+    background-color: #012120;
+    color: #438279;
 }
 
-#input {
-    border: none;
-    background-color: rgba(26,26,26,1.0);
-    color: white;
-    margin: 2px 2px 0px 2px;
+#outer-box {
+    margin: 4px;
+}
+
+#entry:selected, #input {
     outline: none;
+    background-color: #011111;
 }
 
-#entry {
-    margin: 0px;
+#img {
+    padding-right: 4px;
 }
-
-#entry:selected {
-    outline: none;
-    background-color: rgba(26,26,26,0.8);
-    margin: 0px 2px 0px 2px;
-    padding-left: 8px;
-}
-
-#innerbox {
-    margin: -2px;
-}
-
-#scroll {
-    padding: 0px 0px 4px 0px;
-}
-
-#text {
-    color: white;
-}
-

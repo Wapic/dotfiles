@@ -4,18 +4,18 @@
 }
 
 window#waybar {
-	background: #1f2329;
-	color: #a0a8b7;
+	background: #012120;
+	color: #438279;
 }
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
-	color: #1a1a1a;
+	color: #011111;
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #1f2329;
-	background: #1a1a1a;
+	color: #012120;
+	background: #011111;
 }
 
 #workspaces,
@@ -23,24 +23,14 @@ window#waybar {
 #pulseaudio,
 #battery,
 #tray {
-	background: #1a1a1a;
+	background: #011111;
 }
 
 #workspaces button {
 	padding: 0 2px;
-    color: #a0a8b7;
 }
 #workspaces button.active {
-	color: #4581eb;
-}
-
-#workspaces button:hover {
-	text-shadow: inherit;
-	box-shadow: inherit;
-	background: #101010;
-    border: #101010;
-    padding: 0 2px;
-    color: #a0a8b7;
+	color: #438279;
 }
 
 #pulseaudio {

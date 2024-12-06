@@ -1,4 +1,5 @@
 vim.opt.number = true
+vim.opt.wrap = false
 vim.opt.relativenumber = true
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
@@ -42,7 +43,7 @@ Plug('nvim-lualine/lualine.nvim')
 
 Plug('nvim-tree/nvim-web-devicons')
 
-Plug('navarasu/onedark.nvim')
+Plug('Wapic/greentheme-nvim')
 
 vim.call('plug#end')
 

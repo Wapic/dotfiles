@@ -1,12 +1,32 @@
 -- Appearance setup
-local onedark = require "onedark"
+local greentheme = require "greentheme"
 local lualine = require "lualine"
 
-onedark.setup {
-    style = 'darker'
-}
+greentheme.setup({
+        -- Default options
+    override = {},
+    transparent_background = false,
+    nvim_tree = {
+        contrast = false,
+    },
 
-vim.cmd("colorscheme onedark")
+    -- Configuration examples
+
+    -- Override the default highlights using Everblush or other colors
+    override = {
+    },
+
+    -- Set transparent background
+    transparent_background = true,
+
+    -- Set contrast for nvim-tree highlights
+    nvim_tree = {
+        contrast = true,
+    },
+})
+
+vim.cmd("colorscheme greentheme")
+
 lualine.setup({
     options = {
         them = "auto",

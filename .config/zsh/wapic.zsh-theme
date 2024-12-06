@@ -27,14 +27,14 @@ setopt PROMPT_SUBST
     branch="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
     isDirty="$(git status --porcelain 2> /dev/null)"
 
-    PROMPT_END="%F{234}%2~ %k%F{0004}"
+    PROMPT_END="%k%F{0004}"
     if [ -n "$branch" ]; then
-        PROMPT_END="%F{234}%1~ %K{green}%F{0004}%F{234}  $branch %k%F{green}"
+        PROMPT_END="%K{green}%F{0004}%F{234}  $branch %k%F{green}"
         if [ -n "$isDirty" ]; then
-            PROMPT_END="%F{234}%1~ %K{yellow}%F{0004}%F{234}  $branch %k%F{yellow}"
+            PROMPT_END="%K{yellow}%F{0004}%F{234}  $branch %k%F{yellow}"
         fi
     fi
 }
 
 PROMPT_START='%K{234}%F{green} %n@%m %K{0004}%F{234}'
-PROMPT='$PROMPT_START $PROMPT_END%f%k%b '
+PROMPT='%K{004}%F{234} %4~ $PROMPT_END%f%k%b '

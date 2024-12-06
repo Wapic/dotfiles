@@ -1,16 +1,17 @@
 export EDITOR="/usr/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH_FOLDER="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$HOME/.zhistory"
-export HISTSIZE=10000
-export SAVEHIST=10000
 
-autoload -U compinit; compinit
+HISTFILE="$HOME/.zhistory"
+HISTSIZE="10000"
+SAVEHIST="10000"
+
 # case insensitive completion
+autoload -U compinit; compinit
 # zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
 # case insensitive completion only if no case sensitive matches found
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 
 bindkey -e
 

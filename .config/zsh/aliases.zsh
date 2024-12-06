@@ -10,7 +10,6 @@ alias xprop="hyprprop"
 alias mv="mv -v"    #show what is being done 
 
 # SCRIPTS
-alias aur='/home/wapic/scripts/aurbuild.py'
 alias yt-dl='/home/wapic/scripts/yt-dl.py'
 
 # CHANGE DIR
