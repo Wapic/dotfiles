@@ -11,14 +11,14 @@ sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
+echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
 
 # Setup SDDM
 yay -S sddm qt6-5compat qt6-declarative qt6-svg
 sudo git clone https://github.com/kamack38/sddm-greenleaf-theme.git /usr/share/sddm/themes/greenleaf
 sudo rm /usr/share/sddm/themes/greenleaf/background.png
 sudo mv /home/wapic/dotfiles/.config/hypr/wallpaper.png /usr/share/sddm/themes/greenleaf/background.png
-sed -i 's/Font=\"JetBrainsMono Nerd Font Mono\"/FiraCode Nerd Font Mono/' /usr/share/sddm/themes/greenleaf/theme.conf
+sudo sed -i 's/Font=\"JetBrainsMono Nerd Font Mono\"/FiraCode Nerd Font Mono/' /usr/share/sddm/themes/greenleaf/theme.conf
 echo -e "[Theme]\nCurrent=greenleaf" | sudo tee /etc/sddm.conf
 sudo systemctl enable sddm
 
