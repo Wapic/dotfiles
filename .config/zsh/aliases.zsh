@@ -10,7 +10,7 @@ alias xprop="hyprprop"
 alias mv="mv -v"    #show what is being done 
 
 # SCRIPTS
-alias yt-dl='/home/wapic/scripts/yt-dl.py'
+alias yt-dl='/home/wapic/scripts/yt-dl.sh'
 
 # CHANGE DIR
 alias wpc='cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/.minecraft/config/ChatTriggers/modules/'

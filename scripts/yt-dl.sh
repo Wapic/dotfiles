@@ -9,7 +9,7 @@ if [[ -z "$1" ]]; then
 fi
 
 if [[ -z "$2" ]]; then
-    read -rp "File Format: " file_format
+    read -rp "File Format(mp3, wav): " file_format
 fi
 
 if [[ "$file_format" != "mp4" ]]; then

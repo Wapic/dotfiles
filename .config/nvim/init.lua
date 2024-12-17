@@ -10,10 +10,10 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
-Plug('junegunn/fzf', { 
+Plug('junegunn/fzf', {
     ['do'] = function()
 	    vim.fn['fzf#install']()
-    end 
+    end
 })
 
 Plug('ms-jpq/coq_nvim', {
@@ -28,7 +28,7 @@ Plug('ms-jpq/coq.thirdparty', {
     ['branch'] = '3p'
 })
 
-Plug('ms-jpq/chadtree', { 
+Plug('ms-jpq/chadtree', {
 	['branch'] = 'chad',
 	['do'] = 'python3 -m chadtree deps'
 })
@@ -43,7 +43,7 @@ Plug('nvim-lualine/lualine.nvim')
 
 Plug('nvim-tree/nvim-web-devicons')
 
-Plug('Wapic/greentheme-nvim')
+Plug('wapic/greentheme-nvim')
 
 vim.call('plug#end')
 
