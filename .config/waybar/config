@@ -14,6 +14,15 @@
     ],
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"bluetooth",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"network",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -44,6 +53,36 @@
 		"disable-scroll": true,
 		"format": "{id}"
 	},
+    "bluetooth": {
+        "on-click": "blueberry",
+        "format": " {status}",
+        "format-on": "",
+        "format-disabled": "󰂲",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "network": {
+        "interval": 30,
+        "interface": "wlan0",
+        "format": "󱛄",
+        "format-wifi": "{icon}   {frequency}",
+        "format-disconnected": "󰤮",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip": true,
+        "tooltip-format": "{ifname}\t{ipaddr}\n{essid}\t({signalStrength}%)",
+        "tooltip-format-disconnected": "{ifname}",
+        "on-click": "iwgtk"
+    },
 	"clock": {
         "format": "{:%H:%M}   ",
         "format-alt": "{:%A, %B %d, %Y (%R)}",
