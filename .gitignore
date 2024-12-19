@@ -35,12 +35,6 @@
 !.config/kitty/
 !.config/kitty/*
 
-# Btop
-!.config/btop/
-!.config/btop/btop.conf
-!.config/btop/themes/
-!.config/btop/themes/wapic.theme
-
 # zsh
 !.config/zsh/
 !.config/zsh/*
