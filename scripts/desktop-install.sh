@@ -30,12 +30,6 @@ yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboar
        mangohud vulkan-tools corectrl steam prismlauncher gamescope \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland
 
-# Hyprland 0.45.1-b generates the path as '/usr//usr/bin/Hyprland' instead of '/usr/bin/Hyprland'
-# in future releases this step will be unneccesary as it's getting replaced by uwsm
-if [ -f /usr/lib/systemd/user/hyprland-session.service ]; then
-    sudo sed -i 's/\/usr\/\//\//g' /usr/lib/systemd/user/hyprland-session.service
-fi
-
 # Enable systemd units
 systemctl enable --user --now gcr-ssh-agent.socket # Gnome-keyring ssh-agent
 systemctl enable --user --now clipboard-sync # Syncing clipboards between Wayland and XWayland
