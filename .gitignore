@@ -47,6 +47,10 @@
 !.config/waybar/
 !.config/waybar/*
 
+# Tmux
+!.config/tmux/
+!.config/tmux/*
+
 # GTK-Theme
 !.gtkrc-2.0
 !.icons/default/
