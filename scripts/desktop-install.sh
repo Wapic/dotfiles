@@ -25,7 +25,7 @@ yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboar
        hyprland hyprpaper hyprpicker hypridle hyprlock xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit dunst wofi waybar gnome-keyring clipboard-sync \
        pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol audacity playerctl \
        kitty fzf bat zsh killall zip unzip tmux brightnessctl yt-dlp btop fastfetch \
-       firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition chromium pinta stremio nodejs discord-canary \
+       firefox thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition pinta stremio nodejs discord-canary \
        icedtea-web filezilla virt-viewer \
        mangohud vulkan-tools corectrl steam prismlauncher gamescope \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland
