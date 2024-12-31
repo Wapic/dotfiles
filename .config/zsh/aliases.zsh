@@ -13,7 +13,7 @@ alias mv="mv -v"    #show what is being done
 alias yt-dl='/home/wapic/scripts/yt-dl.sh'
 
 # CHANGE DIR
-alias wpc='cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/.minecraft/config/ChatTriggers/modules/'
+alias wpc='cd /home/wapic/.local/share/PrismLauncher/instances/1.8.9/minecraft/config/ChatTriggers/modules/'
 alias nvssd='cd /mnt/nvssd/'
 alias hdd="cd /mnt/hdd/"
 alias ssd="cd /mnt/ssd/"
