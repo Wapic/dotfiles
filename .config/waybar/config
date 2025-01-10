@@ -114,7 +114,7 @@
 		"format-bluetooth": "{icon}   {volume}%",
 		"format-muted": "   MUTED",
 		"format-icons": {
-			"headphones": "",
+			"headset": "",
 			"default": [
 				" ",
 				" "
