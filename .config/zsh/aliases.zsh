@@ -1,4 +1,5 @@
 # QOL
+alias ipconfig='ip -c=always a'
 alias sudo='sudo '
 alias plz='sudo !!'
 alias cp='cp -i'                         # confirm before overwriting something

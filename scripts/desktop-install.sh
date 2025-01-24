@@ -27,7 +27,7 @@ yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboar
        kitty fzf bat zsh killall zip unzip tmux brightnessctl yt-dlp btop fastfetch \
        firefox thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition pinta stremio nodejs discord \
        icedtea-web filezilla virt-viewer \
-       mangohud vulkan-tools corectrl steam prismlauncher gamescope \
+       mangohud vulkan-tools corectrl steam prismlauncher gamescope lib32-mesa-utils mesa-utils \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland
 
 # Enable systemd units
