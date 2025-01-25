@@ -36,7 +36,7 @@ systemctl enable --user --now clipboard-sync # Syncing clipboards between Waylan
 sudo systemctl enable sddm # Display manager
 
 # Set keyboard layout
-sudo localectl set-x11-keymap "se" "pc104" "" "caps:swapescape"
+sudo localectl set-x11-keymap "se" "pc105" "" "caps:escape_shifted_capslock"
 
 # Setup GTK theme
 git clone https://github.com/vinceliuice/Lavanda-gtk-theme.git ~/Lavanda-gtk-theme
