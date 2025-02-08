@@ -28,7 +28,8 @@ yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboar
        firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition chromium pinta stremio nodejs discord \
        icedtea-web filezilla virt-viewer \
        mangohud vulkan-tools corectrl steam prismlauncher gamescope \
-       gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland
+       gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland \
+       udiskie nautilus-open-any-terminal
 
 # Enable systemd units
 systemctl enable --user --now gcr-ssh-agent.socket # Gnome-keyring ssh-agent
@@ -37,6 +38,9 @@ sudo systemctl enable sddm # Display manager
 
 # Set keyboard layout
 sudo localectl set-x11-keymap "se" "pc105" "" "caps:escape_shifted_capslock"
+
+# Setup nautilus
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
 
 # Setup GTK theme
 git clone https://github.com/vinceliuice/Lavanda-gtk-theme.git ~/Lavanda-gtk-theme
