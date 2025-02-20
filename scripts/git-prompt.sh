@@ -334,15 +334,15 @@ __git_ps1_colorize_gitstring ()
 	local branch_color=""
 	if [ "$detached" = no ]; then
 		branch_color="$b_green"
-        end_arrow="$c_green$b_clear$c_clear"
+        end_arrow="$c_green $b_clear$c_clear"
 	else
 		branch_color="$b_red"
-        end_arrow="$c_red$b_clear$c_clear"
+        end_arrow="$c_red $b_clear$c_clear"
 	fi
 	if [ -n "$c" ]; then
 		c="$branch_color$c$c_clear"
 	fi
-	b="$branch_color%F{0004} $c_foreground$b$c_clear"
+	b="$branch_color%F{0004} $c_foreground $b$c_clear"
 
 	if [ -n "$w" ]; then # uncommitted changes
 		w="$bad_color$w$c_clear"
