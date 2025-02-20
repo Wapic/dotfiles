@@ -14,5 +14,5 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWCOLORHINTS=true
 
 precmd() { 
-    __git_ps1 " %4~ " ": %-$%k" "[%s]" 
+    __git_ps1 "%K{0004}%F{234} %4~ %k" "%k %-$" "%s" 
 }

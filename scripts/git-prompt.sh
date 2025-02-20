@@ -308,8 +308,13 @@ __git_ps1_colorize_gitstring ()
 	if [ -n "${ZSH_VERSION-}" ]; then
 		local c_red='%F{red}'
 		local c_green='%F{green}'
+		local c_yellow='%F{yellow}'
 		local c_lblue='%F{blue}'
 		local c_clear='%f'
+        local c_foreground='%F{234}'
+        local b_green='%K{green}'
+        local b_red='%K{red}'
+        local b_clear='%k'
 	else
 		# \001 (SOH) and \002 (STX) are 0-width substring markers
 		# which bash/readline identify while calculating the prompt
@@ -328,25 +333,27 @@ __git_ps1_colorize_gitstring ()
 
 	local branch_color=""
 	if [ "$detached" = no ]; then
-		branch_color="$ok_color"
+		branch_color="$b_green"
+        end_arrow="$c_green$b_clear$c_clear"
 	else
-		branch_color="$bad_color"
+		branch_color="$b_red"
+        end_arrow="$c_red$b_clear$c_clear"
 	fi
 	if [ -n "$c" ]; then
 		c="$branch_color$c$c_clear"
 	fi
-	b="$branch_color$b$c_clear"
+	b="$branch_color%F{0004} $c_foreground$b$c_clear"
 
-	if [ -n "$w" ]; then
+	if [ -n "$w" ]; then # uncommitted changes
 		w="$bad_color$w$c_clear"
 	fi
-	if [ -n "$i" ]; then
-		i="$ok_color$i$c_clear"
+	if [ -n "$i" ]; then # committed changes
+		i="$c_yellow$i$c_clear"
 	fi
-	if [ -n "$s" ]; then
+	if [ -n "$s" ]; then # stash state
 		s="$flags_color$s$c_clear"
 	fi
-	if [ -n "$u" ]; then
+	if [ -n "$u" ]; then # upstream
 		u="$bad_color$u$c_clear"
 	fi
 }
@@ -655,7 +662,7 @@ __git_ps1 ()
 	fi
 
 	local f="$h$w$i$s$u$p"
-	local gitstring="$c$b${f:+$z$f}${sparse}$r${upstream}${conflict}"
+	local gitstring="$c$b${f:+$z$f}${sparse}$r${upstream}${conflict}${end_arrow}"
 
 	if [ "$pcmode" = yes ]; then
 		if [ "${__git_printf_supports_v-}" != yes ]; then
