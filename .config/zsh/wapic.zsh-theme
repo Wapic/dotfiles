@@ -14,5 +14,5 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWCOLORHINTS=true
 
 precmd() { 
-    __git_ps1 "%K{black} %F{green}%n@%m %F{black}%K{0004}%F{234} %1~ %k" "%k %-$" "%s" 
+    __git_ps1 "[%F{green}%n@%m%f |%F{blue} %2~%f" "]$ " " | %s"
 }
