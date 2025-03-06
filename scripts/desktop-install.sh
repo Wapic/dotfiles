@@ -29,7 +29,7 @@ yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboar
        icedtea-web filezilla virt-viewer \
        mangohud vulkan-tools corectrl steam prismlauncher gamescope lib32-mesa-utils mesa-utils \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland \
-       udiskie nautilus-open-any-terminal
+       udiskie nautilus-open-any-terminal clipse
 
 # Enable systemd units
 systemctl enable --user --now gcr-ssh-agent.socket # Gnome-keyring ssh-agent
