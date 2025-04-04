@@ -16,6 +16,7 @@ bindkey -e
 
 source $ZSH_FOLDER/aliases.zsh
 source $ZSH_FOLDER/wapic.zsh-theme
+source $ZSH_FOLDER/extract.zsh
 . ~/scripts/git-prompt.sh
 
 source <(fzf --zsh)
