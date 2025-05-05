@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 wine_cellar="${HOME}/.local/share/wine"
 

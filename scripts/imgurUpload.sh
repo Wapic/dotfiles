@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 IMAGE=$(slurp | grim -g - - | base64)
 
 RESULT=$(curl \
