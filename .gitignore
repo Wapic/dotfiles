@@ -35,6 +35,10 @@
 !.config/kitty/
 !.config/kitty/*
 
+# foot
+!.config/foot/
+!.config/foot/*
+
 # zsh
 !.config/zsh/
 !.config/zsh/*
