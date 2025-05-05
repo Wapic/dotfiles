@@ -47,6 +47,10 @@
 !.config/wofi/
 !.config/wofi/*
 
+# Rofi
+!.config/rofi/
+!.config/rofi/*
+
 # Waybar
 !.config/waybar/
 !.config/waybar/*

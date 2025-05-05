@@ -22,7 +22,7 @@ sudo sed -i 's/Font=\"JetBrainsMono Nerd Font Mono\"/FiraCode Nerd Font Mono/' /
 echo -e "[Theme]\nCurrent=greenleaf" | sudo tee /etc/sddm.conf
 
 yay -Syu jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboard slurp grim \
-       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit uwsm dunst wofi waybar gnome-keyring clipboard-sync \
+       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit uwsm dunst wofi rofi-wayland waybar gnome-keyring clipboard-sync \
        pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol audacity playerctl \
        kitty foot fzf bat zsh zip unzip tmux brightnessctl yt-dlp btop fastfetch \
        firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition chromium pinta stremio nodejs discord \
