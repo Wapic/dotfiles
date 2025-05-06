@@ -20,5 +20,5 @@ alias ssd="cd /mnt/ssd/"
 alias bigssd="cd /mnt/bigssd/"
 
 # ETC
-alias ssh="kitten ssh "
+# alias ssh="kitten ssh "
 alias find="fzf --preview='/home/wapic/scripts/fzf-preview.sh {}' "
