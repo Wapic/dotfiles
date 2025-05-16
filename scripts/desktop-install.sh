@@ -14,7 +14,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
 
 # Setup SDDM
-yay -S sddm qt6-5compat qt6-declarative qt6-svg
+yay -Syu sddm qt6-5compat qt6-declarative qt6-svg
 sudo git clone https://github.com/kamack38/sddm-greenleaf-theme.git /usr/share/sddm/themes/greenleaf
 sudo rm /usr/share/sddm/themes/greenleaf/background.png
 sudo mv /home/wapic/.config/hypr/wallpaper.png /usr/share/sddm/themes/greenleaf/background.png
@@ -24,12 +24,12 @@ echo -e "[Theme]\nCurrent=greenleaf" | sudo tee /etc/sddm.conf
 yay -S jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboard slurp grim \
        hyprland hyprpaper hyprpicker hypridle hyprlock xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit dunst wofi waybar gnome-keyring clipboard-sync \
        pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol audacity playerctl \
-       kitty fzf bat zsh killall zip unzip tmux brightnessctl yt-dlp btop fastfetch \
+       kitty foot fzf bat zsh killall zip unzip tmux brightnessctl yt-dlp btop fastfetch \
        firefox thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition pinta stremio nodejs discord \
        icedtea-web filezilla virt-viewer \
        mangohud vulkan-tools corectrl steam prismlauncher gamescope lib32-mesa-utils mesa-utils \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland \
-       udiskie nautilus-open-any-terminal clipse
+       udiskie nautilus-open-any-terminal clipse --needed
 
 # Enable systemd units
 systemctl enable --user --now gcr-ssh-agent.socket # Gnome-keyring ssh-agent
@@ -40,7 +40,7 @@ sudo systemctl enable sddm # Display manager
 sudo localectl set-x11-keymap "se" "pc105" "" "caps:escape_shifted_capslock"
 
 # Setup nautilus
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 
 # Setup GTK theme
 git clone https://github.com/vinceliuice/Lavanda-gtk-theme.git ~/Lavanda-gtk-theme
