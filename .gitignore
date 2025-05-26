@@ -51,6 +51,10 @@
 !.config/waybar/
 !.config/waybar/*
 
+# uwsm
+!.config/uwsm/
+!.config/uwsm/*
+
 # Tmux
 !.config/tmux/
 !.config/tmux/*
