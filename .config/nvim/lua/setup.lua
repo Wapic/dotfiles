@@ -42,7 +42,7 @@ local treesitter = require "nvim-treesitter.configs"
 treesitter.setup({
     ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "markdown", "bash", "cpp", "html", "json", "python", "rust", "toml", "hyprlang"},
     auto_install = true,
- 
+
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
@@ -55,7 +55,7 @@ vim.filetype.add({
 
 -- LSP / Autocompletion setup
 
-vim.g.coq_settings = { 
+vim.g.coq_settings = {
     auto_start = "shut-up",
     keymap = {
         recommended = false,
@@ -71,9 +71,9 @@ lsp.bashls.setup(coq.lsp_ensure_capabilities{})
 lsp.lua_ls.setup(coq.lsp_ensure_capabilities{})
 
 -- fzf setup
-vim.g.fzf_layout = { 
-    window = { 
-        width = 0.9, 
-        height = 0.9, 
+vim.g.fzf_layout = {
+    window = {
+        width = 0.9,
+        height = 0.9,
     },
 }
