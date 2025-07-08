@@ -27,6 +27,10 @@
 !.config/hypr/
 !.config/hypr/*
 
+# Hyprpanel
+!.config/Hyprpanel/
+!.config/hyprpanel/config.json
+
 # Dunst
 !.config/dunst/
 !.config/dunst/*
