@@ -55,20 +55,42 @@ vim.filetype.add({
 
 -- LSP / Autocompletion setup
 
-vim.g.coq_settings = {
-    auto_start = "shut-up",
-    keymap = {
-        recommended = false,
-    },
-}
-
 local lsp = require "lspconfig"
-local coq = require "coq"
+local cmp = require "cmp"
 
-lsp.ts_ls.setup(coq.lsp_ensure_capabilities{})
-lsp.pyright.setup(coq.lsp_ensure_capabilities{})
-lsp.bashls.setup(coq.lsp_ensure_capabilities{})
-lsp.lua_ls.setup(coq.lsp_ensure_capabilities{})
+cmp.setup({
+    snippet = {},
+    window = {
+        -- completion = cmp.config.window.bordered()
+        -- documentation = cmp.config.window.bordered()
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true}),
+    }),
+    sources = cmp.config.sources({
+     { name = 'nvim_lsp' },
+    }, {
+        { name = 'buffer' },
+    })
+})
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+vim.lsp.config('ts_ls', { capabilities = capabilities })
+vim.lsp.enable('ts_ls')
+
+vim.lsp.config('pyright', { capabilities = capabilities })
+vim.lsp.enable('pyright')
+
+vim.lsp.config('bashls', { capabilities = capabilities })
+vim.lsp.enable('bashls')
+
+vim.lsp.config('lua_ls', { capabilities = capabilities })
+vim.lsp.enable('lua_ls')
 
 -- fzf setup
 vim.g.fzf_layout = {
