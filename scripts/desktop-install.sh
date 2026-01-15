@@ -7,13 +7,13 @@ makepkg -si
 rm -rf ~/yay
 
 # Download Packages
-yay -Syu jdk11-openjdk jdk21-openjdk jdk8-openjdk libqalculate openssh wl-clipboard slurp grim \
-       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit uwsm dunst wofi rofi-wayland ags-hyprpanel-git gnome-keyring clipboard-sync \
+yay -Syu jdk21-temurin jdk-temurin libqalculate openssh wl-clipboard slurp grim \
+       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit uwsm dunst rofi-wayland waybar gnome-keyring \
        pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol audacity playerctl \
        kitty foot fzf bat zsh zip unzip tmux brightnessctl yt-dlp btop fastfetch \
-       firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition chromium pinta stremio nodejs discord \
-       icedtea-web filezilla virt-viewer \
-       mangohud vulkan-tools corectrl steam prismlauncher gamescope \
+       firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition nodejs discord \
+       icedtea-web virt-viewer \
+       mangohud vulkan-tools steam prismlauncher gamescope \
        gnome-theme-extras gtk-engine-murrine breeze-icons noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd ttf-hack-nerd qt5-wayland qt6-wayland \
        udiskie nautilus-open-any-terminal --needed
 
@@ -43,7 +43,7 @@ cd ~/Lavanda-gtk-theme
 rm -rf ~/Lavanda-gtk-theme
 
 # Setup Neovim
-sudo pacman -S neovim npm nodejs python3 pyright lua-language-server
+yay -Syu neovim npm nodejs python3 pyright lua-language-server
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 sudo npm install -g typescript-language-server bash-language-server typescript neovim
 
