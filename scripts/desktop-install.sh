@@ -8,7 +8,7 @@ rm -rf ~/yay
 
 # Download Packages
 yay -Syu jdk21-temurin jdk-temurin libqalculate openssh wl-clipboard slurp grim \
-       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk lxqt-policykit uwsm dunst rofi-wayland waybar gnome-keyring \
+       hyprland hyprpaper hyprpicker hypridle xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprpolkitagent uwsm dunst rofi-wayland waybar gnome-keyring \
        pipewire pipewire-jack pipewire-pulse pipewire-alsa wireplumber pavucontrol audacity playerctl \
        kitty foot fzf bat zsh zip unzip tmux brightnessctl yt-dlp btop fastfetch \
        firefox chromium thunderbird nautilus nextcloud-client imv seahorse nwg-look mpv intellij-idea-community-edition nodejs discord \
@@ -18,7 +18,7 @@ yay -Syu jdk21-temurin jdk-temurin libqalculate openssh wl-clipboard slurp grim 
        udiskie nautilus-open-any-terminal --needed
 
 # Setup SDDM
-yay -S sddm qt6-5compat qt6-declarative qt6-svg
+yay -Syu sddm qt6-5compat qt6-declarative qt6-svg
 sudo git clone https://github.com/kamack38/sddm-greenleaf-theme.git /usr/share/sddm/themes/greenleaf
 sudo rm /usr/share/sddm/themes/greenleaf/background.png
 sudo mv /home/wapic/dotfiles/.config/hypr/wallpaper.png /usr/share/sddm/themes/greenleaf/background.png
@@ -28,6 +28,9 @@ echo -e "[Theme]\nCurrent=greenleaf" | sudo tee /etc/sddm.conf
 # Enable systemd units
 systemctl enable --user --now gcr-ssh-agent.socket # Gnome-keyring ssh-agent
 systemctl enable --user --now clipboard-sync # Syncing clipboards between Wayland and XWayland
+systemctl enable --user --now hyprpaper.service # Wallpaper service
+systemctl enable --user --now hypridle.service # Black out screen after timeout
+systemctl enable --user --now hyprpolkitagent.service # GUI Authentication agent
 sudo systemctl enable sddm # Display manager
 
 # Set keyboard layout
