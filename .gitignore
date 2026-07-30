@@ -1,0 +1,76 @@
+##########
+### ~/ ###
+##########
+*
+!.zshrc
+!.gitignore
+!.drirc
+
+#################
+### ~/scripts ###
+#################
+!Scripts/
+!Scripts/*
+
+#################
+### ~/.config ###
+#################
+!.config/
+
+# Neovim
+!.config/nvim/
+!.config/nvim/init.lua
+!.config/nvim/lua/
+!.config/nvim/lua/*
+
+# Hyprland
+!.config/hypr/
+!.config/hypr/*
+
+# Dunst
+!.config/dunst/
+!.config/dunst/*
+
+# foot
+!.config/foot/
+!.config/foot/*
+
+# zsh
+!.config/zsh/
+!.config/zsh/*
+
+# Rofi
+!.config/rofi/
+!.config/rofi/*
+
+# Waybar
+!.config/waybar/
+!.config/waybar/*
+
+# Tmux
+!.config/tmux/
+!.config/tmux/*
+
+# Theme
+!.gtkrc-2.0
+
+!.icons/default/
+!.icons/default/index.theme
+
+!.config/gtk-3.0/
+!.config/gtk-3.0/settings.ini
+
+!.config/xsettingsd/
+!.config/xsettingsd/xsettingsd.conf
+
+!.config/fontconfig/
+!.config/fontconfig/fonts.conf
+
+!.config/Kvantum/
+!.config/Kvantum/kvantum.kvconfig
+
+!.config/qt5ct/
+!.config/qt5ct/qt5ct.conf
+
+!.config/uwsm/
+!.config/uwsm/*

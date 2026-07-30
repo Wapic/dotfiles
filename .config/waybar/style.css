@@ -1,0 +1,48 @@
+* {
+	font-size: 20px;
+	font-family: Fira Code Nerd Font Regular;
+}
+
+window#waybar {
+	background: #012120;
+	color: #438279;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #011111;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #012120;
+	background: #011111;
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#battery,
+#tray {
+	background: #011111;
+}
+
+#workspaces button {
+	padding: 0 2px;
+}
+#workspaces button.active {
+	color: #438279;
+}
+
+#pulseaudio {
+	color: #4581eb;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+	padding: 0 10px;
+}
+

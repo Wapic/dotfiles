@@ -1,0 +1,22 @@
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
+
+export XDG_SESSION_TYPE,wayland
+export XDG_SESSION_DESKTOP,Hyprland
+export XDG_CURRENT_DESKTOP,Hyprland
+
+export QT_QPA_PLATFORM=wayland;xcb
+export QT_QPA_PLATFORMTHEME=hyprqt6engine
+
+export SDL_VIDEODRIVER=wayland,x11,windows
+export SDL_VIDEO_DRIVER=wayland,x11,windows
+
+export GDK_BACKEND=wayland,x11,*
+
+export CLUTTER_BACKEND=wayland
+
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+export MOZ_ENABLE_WAYLAND=1
+
+export TERMINAL=foot

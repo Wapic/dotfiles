@@ -1,0 +1,123 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "bottom",
+
+	"modules-left": [
+	    "custom/right-arrow-light",	
+        "hyprland/workspaces",
+		"custom/right-arrow-dark"
+	],
+    "modules-center": [
+        "hyprland/window",
+    ],
+	"modules-right": [
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"tray"
+	],
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"format": "{id}",
+	},
+	"clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+	},
+	"pulseaudio": {
+		"format": "{icon}   {volume:2}%",
+		"format-bluetooth": "{icon}   {volume}%",
+		"format-muted": "   MUTED",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				" ",
+				" "
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+	"battery": {
+        "interval": 5,
+		"states": {
+			"good": 60,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+        "tooltip-format": "Max capacity: {health}%\n{timeTo}",
+        "format-charging": "{icon}󱐋 {capacity}%",
+		"format-icons": [
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󱟢",
+		]
+	},
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true,
+        "max-length": 50,
+        "rewrite": {
+            "(.*) - Mozilla Firefox": "🌎 $1",
+        }
+    },
+	"tray": {
+		"icon-size": 20,
+        "spacing": 4,
+        "show-passive-items": true,
+	}
+}
