@@ -24,17 +24,13 @@ lualine.setup({
 local treesitter = require "nvim-treesitter"
 
 treesitter.setup({
-    ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "markdown", "bash", "cpp", "html", "json", "python", "rust", "toml", "hyprlang"},
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "markdown", "bash", "cpp", "html", "json", "python", "rust", "toml" },
     auto_install = true,
 
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
     },
-})
-
-vim.filetype.add({
-    pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
 -- LSP / Autocompletion setup
