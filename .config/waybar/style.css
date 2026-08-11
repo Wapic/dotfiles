@@ -22,6 +22,7 @@ window#waybar {
 #clock,
 #pulseaudio,
 #battery,
+#bluetooth,
 #tray {
 	background: #011111;
 }
@@ -35,6 +36,10 @@ window#waybar {
 
 #pulseaudio {
 	color: #4581eb;
+}
+
+#battery {
+	color: #28a058;
 }
 
 #clock,

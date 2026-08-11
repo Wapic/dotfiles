@@ -79,7 +79,7 @@ hl.config({
 		sensitivity = 0.0,
 
 		touchpad = {
-			natural_scroll = false,
+			natural_scroll = true,
 		},
 	},
 
@@ -115,6 +115,4 @@ require("binds")
 require("monitors")
 require("windowrules")
 require("workspacerules")
-require("autostart")
-
-require("laptop") -- laptop will override certain stuff so make sure it loads last
+require("device-specific") -- will override certain stuff so make sure it loads last

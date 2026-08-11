@@ -20,7 +20,8 @@
 		"clock",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"tray"
+		"tray",
+		"battery"
 	],
 
 	"custom/left-arrow-dark": {
@@ -116,7 +117,7 @@
         }
     },
 	"tray": {
-		"icon-size": 20,
+		"icon-size": 24,
         "spacing": 4,
         "show-passive-items": true,
 	}

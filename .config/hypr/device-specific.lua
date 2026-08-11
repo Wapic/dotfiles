@@ -25,4 +25,20 @@ if hostname ~= "WpcDesktop" then
 			direct_scanout = 0,
 		},
 	})
+
+	hl.monitor({
+		output = "eDP-1",
+		mode = "preferred",
+		position = "auto",
+		scale = 1.33
+	})
+else
+	hl.window_rule({
+		name = "allow_tearing",
+		match = {
+			class = "^(gamescope|steam_app_.*|cs2|.*osu.*)$",
+		},
+		immediate = true,
+	})
+	require("autostart")
 end
