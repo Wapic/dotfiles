@@ -41,4 +41,5 @@ else
 		immediate = true,
 	})
 	require("autostart")
+	require("workspace-rules")
 end

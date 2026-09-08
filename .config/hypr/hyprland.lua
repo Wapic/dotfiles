@@ -113,6 +113,5 @@ hl.gesture({
 
 require("binds")
 require("monitors")
-require("windowrules")
-require("workspacerules")
+require("window-rules")
 require("device-specific") -- will override certain stuff so make sure it loads last
