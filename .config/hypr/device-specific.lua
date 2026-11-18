@@ -32,6 +32,8 @@ if hostname ~= "WpcDesktop" then
 		position = "auto",
 		scale = 1.33
 	})
+
+	require("autostart")
 else
 	hl.window_rule({
 		name = "allow_tearing",
